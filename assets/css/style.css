@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Quicksand:wght@400;700&display=swap');
+
+* {
+	box-sizing: border-box;
+	font-family: Nunito;
+	scroll-behavior: smooth;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	margin: 0;
+	padding: 0;
+}
+
+@keyframes fadeInDown {
+	from {
+		opacity: 0;
+		transform: translateY(-50px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+header {
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	background: #fff4f6;
+	position: absolute;
+}
+#header-container {
+	width: 92%;
+	display: inline-flex;
+	align-items: center;
+	justify-content: space-between;
+	margin: 0.1rem 1rem;
+	flex-wrap: wrap;
+}
+@media screen and (max-width: 610px) {
+	#header-container {
+		justify-content: center;
+	}
+}
+
+nav {
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	gap: 45px;
+}
+nav a {
+	text-decoration: none;
+	color: #bfbfbf;
+	font-family: Nunito;
+	font-size: 24px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: normal;
+	border: none;
+	background-color: transparent;
+	cursor: pointer;
+	margin: 1rem 0;
+}
+nav .unselected:hover {
+	color: #4b5c98;
+	transition: 0.3s;
+}
+.button {
+	border-radius: 100px;
+	background: #4b5c98;
+	padding: 0.1rem 1.2rem;
+	font-family: Nunito;
+	color: #fff;
+	font-family: Nunito;
+	font-size: 24px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: normal;
+	border: #eddeb7 1px solid;
+	cursor: pointer;
+}
+.button:hover {
+	background: #6e7ba9;
+	transition: 0.3s;
+}
+
+main {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	background: linear-gradient(180deg, rgba(227, 228, 228, 0.33) 0%, #fff4f6 100%);
+	width: 100%;
+	gap: 10rem;
+}
+#promotion-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	text-align: center;
+	background-image: url(../images/halalin-bg.png);
+	width: 100%;
+	height: 696px;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-color: rgba(255, 255, 255, 0.5);
+	background-blend-mode: lighten;
+}
+#promotion-text {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 85%;
+	flex-direction: column;
+	text-align: center;
+	margin: 0 2rem;
+}
+.about-halalin-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	color: #4b5c98;
+	font-family: Nunito;
+	font-size: 42px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: normal;
+	text-align: center;
+	width: 85%;
+	gap: 2rem;
+}
+.items-container {
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	gap: 1rem;
+	flex-wrap: wrap;
+}
+.item-box {
+	width: 342.382px;
+	height: 323px;
+	border-radius: 15px;
+	background: linear-gradient(97deg, #e3e3e3 2.97%, #eddeb7 120.26%);
+}
+
+footer {
+	height: 408px;
+	width: 100%;
+	background-color: #dcd6d7;
+}
