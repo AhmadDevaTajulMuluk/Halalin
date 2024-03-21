@@ -147,7 +147,7 @@ main {
 	background: linear-gradient(97deg, #e3e3e3 2.97%, #eddeb7 120.26%);
 }
 
-.container {
+.login-container {
 	display: flex;
 	align-items: center;
 	justify-content: center;
