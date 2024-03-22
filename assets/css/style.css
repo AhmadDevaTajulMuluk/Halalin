@@ -320,6 +320,40 @@ button:hover {
   gap: 20px;
 }
 
+.field-register *{
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 85%; /* Lebar input */
+}
+
+.field-register svg {
+    position: absolute;
+    left: 15px; /* Penyesuaian posisi ikon */
+    height: 20px;
+    fill: #555;
+}
+
+.daftar-btn{
+	margin-top: 15px;
+    padding: 10px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    width: 20%;
+    height: auto;
+    border-radius: 30px;
+    font-size: 20px;
+    font-weight: 700;
+    color: #FFF4F6;
+    text-align: center;
+    background-color: #4B5C98;
+    box-shadow: 3px 3px 8px #b1b1b1,
+    -3px -3px 8px #fff;
+    transition: all 0.5s;
+  }
+  /*REGISTER*/
+
 footer {
   height: 408px;
   width: 100%;
