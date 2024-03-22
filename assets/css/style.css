@@ -351,6 +351,7 @@ button:hover {
 	transition: all 0.5s;
 }
 /*REGISTER*/
+
 footer {
 	height: 408px;
 	width: 100%;
@@ -374,6 +375,36 @@ footer {
 	height: auto;
 	gap: 25px;
 }
-.artikel-container article {
+.artikel-container .artikel-box article {
+	display: flex;
+	flex-direction: column;
+	background-color: #e3e3e3;
+	margin: 20px;
+	padding: 20px;
+	border-radius: 15px;
+}
+.artikel-container .artikel-box article a {
+	text-decoration: none;
+	width: fit-content;
+	align-self: flex-end;
+}
+.artikel-container #navigator {
+	display: flex;
+	justify-content: center;
+	gap: 10px;
+	margin: 20px 0;
+}
+.artikel-container #navigator a {
+	background-color: #4b5c98;
+	color: white;
+	padding: 5px 10px;
+	text-decoration: none;
+	border-radius: 8px;
+}
+.artikel-container #navigator a:hover {
+	background-color: #001b3f;
+}
+.artikel-container #navigator a.selected {
+	background-color: #001b3f;
 }
 /* Article Pages */
