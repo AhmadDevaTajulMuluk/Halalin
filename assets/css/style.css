@@ -351,7 +351,6 @@ button:hover {
 	transition: all 0.5s;
 }
 /*REGISTER*/
-
 footer {
 	height: 408px;
 	width: 100%;
@@ -366,6 +365,4 @@ footer {
 	width: 90%;
 	margin: auto;
 	gap: 20px;
-}
-.artikel-container article {
 }
