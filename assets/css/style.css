@@ -131,6 +131,11 @@ main {
 	width: 85%;
 	gap: 2rem;
 }
+#about-halalin {
+	width: 70%;
+	height: 70%;
+	margin-top: -60px;
+}
 .items-container {
 	display: inline-flex;
 	justify-content: center;
