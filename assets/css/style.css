@@ -401,3 +401,9 @@ footer {
 	text-decoration: none;
 	border-radius: 8px;
 }
+.artikel-container #navigator a:hover {
+	background-color: #001b3f;
+}
+.artikel-container #navigator a.selected {
+	background-color: #001b3f;
+}
