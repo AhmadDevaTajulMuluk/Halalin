@@ -36,9 +36,10 @@ header {
 	height: 70px;
 	flex-wrap: wrap;
 }
-@media screen and (max-width: 610px) {
+@media screen and (max-width: 790px) {
 	#header-container {
 		justify-content: center;
+		height: 140px;
 	}
 }
 
@@ -388,6 +389,17 @@ footer {
 	width: fit-content;
 	align-self: flex-end;
 }
+.artikel-container .artikel-box article p {
+	display: -webkit-box;
+	-webkit-line-clamp: 3;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	/* tambahkan efek fading */
+	/* -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+	mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)); */
+}
+
 .artikel-container #navigator {
 	display: flex;
 	justify-content: center;
