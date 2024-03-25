@@ -1,115 +1,137 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="../assets/css/style.css" />
-		<title>Dashboard</title>
-	</head>
-	<body>
-		<header class="header-effect">
-			<div id="header-container">
-				<img src="../assets/images/halalin-logo.png" alt="Halalin" width="150px" />
-				<nav>
-					<a href="#" style="font-weight: 700; color: #4b5c98">Beranda</a>
-					<a href="#" class="unselected">Artikel</a>
-					<a href="#" class="unselected">Pelatihan</a>
-					<a href="#" class="unselected">Konsultasi</a>
-					<a href="./pages/login.html" class="button">Masuk</a>
-				</nav>
-			</div>
-		</header>
-		<main>
-			<article id="promotion-container">
-				<div id="promotion-text">
-					<h1
-						style="
-							font-size: 65px;
-							margin: 10px;
-							padding-inline: 80px;
-							text-align: center;
-							color: #4b5c98;
-						">
-						Langkah Halal Mencari Cinta Sejati
-					</h1>
-					<p style="font-size: 20px; margin: 10px; text-align: center">
-						Temukan jodohmu dengan aplikasi Halalin
-					</p>
-					<button class="button" style="display: flex; padding: 0.8rem 1.2rem; margin: 1rem 0">
-						Daftar Sekarang
-					</button>
-				</div>
-			</article>
-			<article id="about-halalin" class="about-halalin-container container-effect">
-				<h2 style="margin: 0">Tentang Halalin</h2>
-				<p style="font-size: 18px; color: #4b4b4b; font-weight: 400; margin: 0">
-					Halalin merupakan website yang dikembangkan untuk menghubungkan seseorang yang serius
-					dalam mencari pasangan hidup dan sesuai dengan syariat islam. Website ini dapat menjadi
-					solusi untuk mereka yang merasa kesulitan dalam mencari pasangan sehidup sematinya.
-					Website ini hadir untuk membantu orang mencapai sebuah keharusan yang wajib dilaksanakan
-					oleh tiap umat muslim, yaitu menikah.
-				</p>
-			</article>
-			<article id="services-halalin" class="about-halalin-container container-effect">
-				<h2 style="margin: 0">Layanan Kami</h2>
-				<div class="items-container">
-					<div class="item-box-layanan">
-						<div class="layanan-text">
-							<h3>Buat CV</h3>
-							<hr />
-							<p>Buat CV ta’aruf anda agar mendapatkan pasangan yang cocok.</p>
-						</div>
-					</div>
-					<div class="item-box-layanan">
-						<div class="layanan-text">
-							<h3>Lihat Artikel</h3>
-							<hr />
-							<p>Lihat artikel terkait dengan pernikahan.</p>
-						</div>
-					</div>
-					<div class="item-box-layanan">
-						<div class="layanan-text">
-							<h3>Cari Pasangan</h3>
-							<hr />
-							<p>Mencari pasangan dengan searching and matching.</p>
-						</div>
-					</div>
-					<div class="item-box-layanan">
-						<div class="layanan-text">
-							<h3>Latihan Pranikah</h3>
-							<hr />
-							<p>Ikuti Pelatihan Pranikah sekarang.</p>
-						</div>
-					</div>
-				</div>
-			</article>
-			<article id="comments-halalin" class="about-halalin-container container-effect">
-				<h2 style="margin: 0">Apa Kata Mereka</h2>
-				<div class="items-container">
-					<div class="item-box"></div>
-					<div class="item-box"></div>
-					<div class="item-box"></div>
-				</div>
-			</article>
-			<article
-				id="articles-halalin"
-				class="about-halalin-container container-effect"
-				style="margin-bottom: 2rem">
-				<h2 style="margin: 0">Artikel</h2>
-				<div class="items-container">
-					<div class="item-box"></div>
-					<div class="item-box"></div>
-					<div class="item-box"></div>
-					<div class="item-box"></div>
-					<div class="item-box"></div>
-					<div class="item-box"></div>
-				</div>
-				<a href="#" style="font-size: 18px; margin-top: 10px; text-decoration: none">
-					Lebih Banyak..
-				</a>
-			</article>
-		</main>
-		<footer></footer>
-		<script type="text/javascript" src="../assets/js/script.js"></script>
-	</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <title>Dashboard</title>
+  </head>
+  <body>
+    <header class="header-effect">
+      <div id="header-container">
+        <img
+          src="../assets/images/halalin-logo.png"
+          alt="Halalin"
+          width="150px"
+        />
+        <nav>
+			<a href="./index.html" class="selected">Beranda</a>
+			<a href="./pages/artikel.html" class="unselected">Artikel</a>
+			<a href="./pages/pelatihan.html" class="unselected">Pelatihan</a>
+			<a href="./pages/konsultasi.html" class="unselected">Konsultasi</a>
+			<a href="./pages/login.html" class="button">Masuk</a>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <article id="promotion-container">
+        <div id="promotion-text">
+          <h1
+            style="
+              font-size: 65px;
+              margin: 10px;
+              padding-inline: 80px;
+              text-align: center;
+              color: #4b5c98;
+            "
+          >
+            Langkah Halal Mencari Cinta Sejati
+          </h1>
+          <p style="font-size: 20px; margin: 10px; text-align: center">
+            Temukan jodohmu dengan aplikasi Halalin
+          </p>
+          <button
+            class="button"
+            style="display: flex; padding: 0.8rem 1.2rem; margin: 1rem 0"
+          >
+            Daftar Sekarang
+          </button>
+        </div>
+      </article>
+      <article
+        id="about-halalin"
+        class="about-halalin-container container-effect"
+      >
+        <h2 style="margin: 0">Tentang Halalin</h2>
+        <p style="font-size: 18px; color: #4b4b4b; font-weight: 400; margin: 0">
+          Halalin merupakan website yang dikembangkan untuk menghubungkan
+          seseorang yang serius dalam mencari pasangan hidup dan sesuai dengan
+          syariat islam. Website ini dapat menjadi solusi untuk mereka yang
+          merasa kesulitan dalam mencari pasangan sehidup sematinya. Website ini
+          hadir untuk membantu orang mencapai sebuah keharusan yang wajib
+          dilaksanakan oleh tiap umat muslim, yaitu menikah.
+        </p>
+      </article>
+      <article
+        id="services-halalin"
+        class="about-halalin-container container-effect"
+      >
+        <h2 style="margin: 0">Layanan Kami</h2>
+        <div class="items-container">
+          <div class="item-box-layanan">
+            <div class="layanan-text">
+              <h3>Buat CV</h3>
+              <hr />
+              <p>Buat CV ta’aruf anda agar mendapatkan pasangan yang cocok.</p>
+            </div>
+          </div>
+          <div class="item-box-layanan">
+            <div class="layanan-text">
+              <h3>Lihat Artikel</h3>
+              <hr />
+              <p>Lihat artikel terkait dengan pernikahan.</p>
+            </div>
+          </div>
+          <div class="item-box-layanan">
+            <div class="layanan-text">
+              <h3>Cari Pasangan</h3>
+              <hr />
+              <p>Mencari pasangan dengan searching and matching.</p>
+            </div>
+          </div>
+          <div class="item-box-layanan">
+            <div class="layanan-text">
+              <h3>Latihan Pranikah</h3>
+              <hr />
+              <p>Ikuti Pelatihan Pranikah sekarang.</p>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article
+        id="comments-halalin"
+        class="about-halalin-container container-effect"
+      >
+        <h2 style="margin: 0">Apa Kata Mereka</h2>
+        <div class="items-container">
+          <div class="item-box"></div>
+          <div class="item-box"></div>
+          <div class="item-box"></div>
+        </div>
+      </article>
+      <article
+        id="articles-halalin"
+        class="about-halalin-container container-effect"
+        style="margin-bottom: 2rem"
+      >
+        <h2 style="margin: 0">Artikel</h2>
+        <div class="items-container">
+          <div class="item-box"></div>
+          <div class="item-box"></div>
+          <div class="item-box"></div>
+          <div class="item-box"></div>
+          <div class="item-box"></div>
+          <div class="item-box"></div>
+        </div>
+        <a
+          href="#"
+          style="font-size: 18px; margin-top: 10px; text-decoration: none"
+        >
+          Lebih Banyak..
+        </a>
+      </article>
+    </main>
+    <footer id="footer"></footer>
+    <script type="text/javascript" src="../assets/js/script.js"></script>
+  </body>
 </html>
