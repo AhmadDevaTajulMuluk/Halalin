@@ -549,3 +549,90 @@ button:hover {
 .footer-article a:hover {
   text-decoration: underline;
 }
+
+/* CSS PELATIHAN */
+.box{
+  display: flex;
+  flex: 1;
+}
+
+.side-soal{
+  padding: 20px;
+  margin: 1px;
+  flex: 0 0 260px;
+  text-align: center;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.number-box {
+  width: 55px;
+  height: 55px;
+  line-height: 55px;
+  margin: 5px;
+  border: 2px solid #4B5C98;
+  border-radius: 5px;
+  display: inline-block;
+  font-size: 18px;
+  background-color: #fff;
+color: #4B5C98;
+font-weight: 700;
+cursor: pointer;
+box-shadow: 4px 3px 6px rgba(107, 107, 107, 0.274); /* Box shadow dengan warna biru */
+}
+
+.number-box.selected {
+  background-color: #4B5C98;
+  color: #FFF;
+  border-color: #4B5C98;
+}
+
+.wrapper-soal{
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin: 20px;
+}
+
+.soal{
+  flex: 1;
+  padding: 25px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 5px;
+  color: #4B4B4B;
+  background-color: #fff;
+  font-size: 16px;
+}
+
+.choice{
+  display: flex;
+padding-left: 20px;
+  margin: 0 0;
+  width: 100%;
+  font-size: 1.3rem;
+  background-color: white;
+}
+
+.choice-prefix{
+  padding: 20px 25px;
+  background-color: #FFF;
+border-radius: 5px;
+  color: #4B5C98;
+  font-weight: 700;
+border: 2px solid #4B5C98; /* Border biru */
+  box-shadow: 5px 5px 10px rgba(107, 107, 107, 0.274); /* Box shadow dengan warna biru */
+cursor: pointer;
+}
+
+.choice-prefix.clicked {
+  background-color: #4B5C98;
+  color: #FFF;
+}
+
+
+
+.choice-text{
+  padding: 20px;
+cursor: pointer;
+}
