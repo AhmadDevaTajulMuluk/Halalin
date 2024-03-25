@@ -52,3 +52,23 @@ window.onload = function () {
 		});
 	});
 };
+
+function selectChoice(element) {
+    var choices = document.querySelectorAll('.choice-prefix, .choice-text');
+    for (var i = 0; i < choices.length; i++) {
+        choices[i].classList.remove('clicked');
+    }
+    element.classList.add('clicked');
+    
+    // Menemukan elemen .choice-prefix terkait dan menambahkan kelas clicked kepadanya juga
+    var choicePrefix = element.closest('.choice').querySelector('.choice-prefix');
+    choicePrefix.classList.add('clicked');
+}
+
+function selectNumber(element) {
+    var numbers = document.querySelectorAll('.number-box');
+    for (var i = 0; i < numbers.length; i++) {
+        numbers[i].classList.remove('selected');
+    }
+    element.classList.add('selected');
+}
