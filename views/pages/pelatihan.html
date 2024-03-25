@@ -9,7 +9,38 @@
 <body>
     <header id="navbar" class="header-effect"></header>
     <main>
-        <h1>isi pelatihan</h1>
+        <div class="box">
+            <aside class="side-soal">
+                <h1>Soal</h1>
+                <div class="number-box" onclick="selectNumber(this)">1</div>
+                <div class="number-box" onclick="selectNumber(this)">2</div>
+                <div class="number-box" onclick="selectNumber(this)">3</div>
+            </aside>
+            <div class="wrapper-soal">
+                <div class="soal">
+                    <h1>Soal 1</h1>
+                    <p style="font-size: 1.3rem;">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta eveniet blanditiis ut pariatur aliquam alias veritatis quos doloribus natus, qui omnis nihil quo voluptatum aspernatur cum incidunt numquam quasi voluptatem!
+                    </p>
+                    <div class="choice">
+                        <p class="choice-prefix" onclick="selectChoice(this)">A</p>
+                        <p class="choice-text" onclick="selectChoice(this)">Pilihan A</p>
+                    </div>
+                    <div class="choice">
+                        <p class="choice-prefix" onclick="selectChoice(this)">B</p>
+                        <p class="choice-text" onclick="selectChoice(this)">Pilihan B</p>
+                    </div>
+                    <div class="choice">
+                        <p class="choice-prefix" onclick="selectChoice(this)">C</p>
+                        <p class="choice-text" onclick="selectChoice(this)">Pilihan C</p>
+                    </div>
+                    <div class="choice">
+                        <p class="choice-prefix" onclick="selectChoice(this)">D</p>
+                        <p class="choice-text" onclick="selectChoice(this)">Pilihan D</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
     <section id="footer"></section>
     <script type="text/javascript" src="../../assets/js/script.js"></script>
