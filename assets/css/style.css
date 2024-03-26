@@ -754,85 +754,102 @@ button:hover {
 
 /* CSS PELATIHAN */
 .box {
-	display: flex;
-	flex: 1;
+  display: flex;
+  flex: 1;
 }
 
 .side-soal {
-	padding: 20px;
-	margin: 1px;
-	flex: 0 0 260px;
-	text-align: center;
-	background-color: #fff;
-	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin: 2px;
+  flex: 0 0 260px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
-
+#number-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  padding-inline: 25px;
+}
 .number-box {
-	width: 55px;
-	height: 55px;
-	line-height: 55px;
-	margin: 5px;
-	border: 2px solid #4b5c98;
-	border-radius: 5px;
-	display: inline-block;
-	font-size: 18px;
-	background-color: #fff;
-	color: #4b5c98;
-	font-weight: 700;
-	cursor: pointer;
-	box-shadow: 4px 3px 6px rgba(107, 107, 107, 0.274); /* Box shadow dengan warna biru */
+  width: 45px;
+  height: 45px;
+  line-height: 45px;
+  margin: 5px;
+  border: 2px solid #4b5c98;
+  border-radius: 5px;
+  display: inline-block;
+  font-size: 18px;
+  background-color: #fff;
+  color: #4b5c98;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 4px 3px 6px rgba(107, 107, 107, 0.274); /* Box shadow dengan warna biru */
 }
 
 .number-box.selected {
-	background-color: #4b5c98;
-	color: #fff;
-	border-color: #4b5c98;
+  background-color: #4b5c98;
+  color: #fff;
+  border-color: #4b5c98;
 }
 
 .wrapper-soal {
-	display: flex;
-	flex-direction: column;
-	position: relative;
-	margin: 20px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin: 20px;
 }
 
 .soal {
-	flex: 1;
-	padding: 25px;
-	border-radius: 5px;
-	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-	margin: 5px;
-	color: #4b4b4b;
-	background-color: #fff;
-	font-size: 16px;
+  flex: 1;
+  padding: 5px 30px 20px 30px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 5px;
+  color: #4b4b4b;
+  background-color: #fff;
+  font-size: 16px;
 }
-
+.choice-container {
+  display: flex;
+  flex-direction: column;
+}
 .choice {
-	display: flex;
-	padding-left: 20px;
-	margin: 0 0;
-	width: 100%;
-	font-size: 1.3rem;
-	background-color: white;
+  display: flex;
+  padding-left: 20px;
+  margin: 0 0;
+  font-size: 20px;
+  background-color: rgba(255, 255, 255, 0.671);
 }
 
 .choice-prefix {
-	padding: 20px 25px;
-	background-color: #fff;
-	border-radius: 5px;
-	color: #4b5c98;
-	font-weight: 700;
-	border: 2px solid #4b5c98; /* Border biru */
-	box-shadow: 5px 5px 10px rgba(107, 107, 107, 0.274); /* Box shadow dengan warna biru */
-	cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 45px;
+  width: 45px;
+  background-color: #fff;
+  border-radius: 5px;
+  color: #4b5c98;
+  font-weight: 600;
+  border: 2px solid #4b5c98; /* Border biru */
+  box-shadow: 5px 5px 10px rgba(107, 107, 107, 0.274); /* Box shadow dengan warna biru */
+  cursor: pointer;
 }
 
 .choice-prefix.clicked {
-	background-color: #4b5c98;
-	color: #fff;
+  background-color: #4b5c98;
+  color: #fff;
 }
 
 .choice-text {
-	padding: 20px;
-	cursor: pointer;
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
 }
+

@@ -1,48 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../assets/css/style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../assets/css/style.css" />
     <title>Pelatihan</title>
-</head>
-<body>
+  </head>
+  <body>
     <header id="navbar" class="header-effect"></header>
     <main>
-        <div class="box">
-            <aside class="side-soal">
+      <div class="box">
+        <aside class="side-soal">
+            <div class="number-soal">
                 <h1>Soal</h1>
+            </div>
+            <div id="number-container">
                 <div class="number-box" onclick="selectNumber(this)">1</div>
                 <div class="number-box" onclick="selectNumber(this)">2</div>
                 <div class="number-box" onclick="selectNumber(this)">3</div>
-            </aside>
-            <div class="wrapper-soal">
-                <div class="soal">
-                    <h1>Soal 1</h1>
-                    <p style="font-size: 1.3rem;">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta eveniet blanditiis ut pariatur aliquam alias veritatis quos doloribus natus, qui omnis nihil quo voluptatum aspernatur cum incidunt numquam quasi voluptatem!
-                    </p>
-                    <div class="choice">
-                        <p class="choice-prefix" onclick="selectChoice(this)">A</p>
-                        <p class="choice-text" onclick="selectChoice(this)">Pilihan A</p>
-                    </div>
-                    <div class="choice">
-                        <p class="choice-prefix" onclick="selectChoice(this)">B</p>
-                        <p class="choice-text" onclick="selectChoice(this)">Pilihan B</p>
-                    </div>
-                    <div class="choice">
-                        <p class="choice-prefix" onclick="selectChoice(this)">C</p>
-                        <p class="choice-text" onclick="selectChoice(this)">Pilihan C</p>
-                    </div>
-                    <div class="choice">
-                        <p class="choice-prefix" onclick="selectChoice(this)">D</p>
-                        <p class="choice-text" onclick="selectChoice(this)">Pilihan D</p>
-                    </div>
+                <div class="number-box" onclick="selectNumber(this)">4</div>
+                <div class="number-box" onclick="selectNumber(this)">5</div>
+            </div>
+        </aside>
+        <div class="wrapper-soal">
+          <div class="soal">
+            <div id="soal-container">
+                <h1>Soal 1</h1>
+                <p style="font-size: 18px">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta
+                  eveniet blanditiis ut pariatur aliquam alias veritatis quos
+                  doloribus natus, qui omnis nihil quo voluptatum aspernatur cum
+                  incidunt numquam quasi voluptatem!
+                </p>
+            </div>
+            <div class="choice-container">
+                <div class="choice">
+                  <p class="choice-prefix" onclick="selectChoice(this)">A</p>
+                  <p class="choice-text" onclick="selectChoice(this)">Pilihan A</p>
+                </div>
+                <div class="choice">
+                  <p class="choice-prefix" onclick="selectChoice(this)">B</p>
+                  <p class="choice-text" onclick="selectChoice(this)">Pilihan B</p>
+                </div>
+                <div class="choice">
+                  <p class="choice-prefix" onclick="selectChoice(this)">C</p>
+                  <p class="choice-text" onclick="selectChoice(this)">Pilihan C</p>
+                </div>
+                <div class="choice">
+                  <p class="choice-prefix" onclick="selectChoice(this)">D</p>
+                  <p class="choice-text" onclick="selectChoice(this)">Pilihan D</p>
                 </div>
             </div>
+          </div>
         </div>
+      </div>
     </main>
     <section id="footer"></section>
     <script type="text/javascript" src="../../assets/js/script.js"></script>
-</body>
+  </body>
 </html>
