@@ -114,43 +114,35 @@ function register() {
     .querySelector(".confirmpass-input")
     .value.trim();
 
-  if (fname === "") {
-    alert("Data tidak boleh kosong");
-    // document.querySelectorAll('.fname-input').style.borderColor = 'red';
-    return;
-  }
-  if (lname === "") {
-    alert("Data tidak boleh kosong");
-    // document.querySelector('.lname-input').style.borderColor = 'red';
-    return;
-  }
-  if (phone === "") {
-    alert("Data tidak boleh kosong");
-    // document.querySelector('.phone-input').style.borderColor = 'red';
-    return;
-  }
-  if (email === "") {
-    alert("Data tidak boleh kosong");
-    // document.querySelector('.email-input').style.borderColor = 'red';
-    return;
-  }
-  if (password === "") {
-    alert("Password harus diisi");
-    // document.querySelector('.pass-input').style.borderColor = 'red';
-    return;
-  }
-  if (confirmPassword === "") {
-    alert("Konfirmasi password harus diisi");
-    // document.querySelector('.confirmpass-input').style.borderColor = 'red';
-    return;
-  }
-  if (password !== confirmPassword) {
-    alert("Password dan Konfirmasi password tidak sama");
-    // document.querySelector('.confirmpass-input').style.borderColor = 'red';
+  var errorMessage = document.getElementById("message");
+  var inputs = document.querySelectorAll(".field-register input");
+
+  if (
+    fname === "" ||
+    lname === "" ||
+    phone === "" ||
+    email === "" ||
+    password === "" ||
+    confirmPassword === ""
+  ) {
+    errorMessage.innerText = "Data tidak boleh kosong";
+    inputs.forEach((input) => (input.style.borderColor = "red"));
+    errorMessage.style.display = "block";
+    errorMessage.style.color = "red";
     return;
   }
 
-  window.location.href = "../pages/dashboard.html";
+  inputs.forEach((input) => (input.style.borderColor = ""));
+  errorMessage.style.display = "none";
+
+  if (password !== confirmPassword) {
+    errorMessage.innerText = "Password dan Konfirmasi password tidak sama";
+    errorMessage.style.display = "block";
+    errorMessage.style.color = "red";
+    return;
+  }
+  errorMessage.innerText = "";
+  window.location.href = "./dashboard.html";
 }
 
 function login() {
@@ -167,7 +159,7 @@ function login() {
     // document.querySelector('.pass-input').style.borderColor = 'red';
     return;
   }
-  window.location.href = "../pages/dashboard.html";
+  window.location.href = "./dashboard.html";
 }
 
 function selectNumber(element) {

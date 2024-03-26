@@ -458,8 +458,8 @@ button:hover {
 }
 .field-register svg {
   position: absolute;
-  left: 10px; /* Penyesuaian posisi ikon */
-  height: 10px;
+  left: 15px; /* Penyesuaian posisi ikon */
+  height: 20px;
   fill: #555;
 }
 
