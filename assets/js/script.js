@@ -14,6 +14,18 @@ document.addEventListener('DOMContentLoaded', function () {
 		.catch((error) => console.error('Ada kesalahan:', error));
 });
 
+function toogleDropdown() {
+	const dropdown = document.getElementById('responsive-dropdown');
+	const navbar_dropdown = document.getElementById('nav-container');
+	if (dropdown.style.display === 'none') {
+		dropdown.style.display = 'block';
+		navbar_dropdown.style.right = '-200px';
+	} else {
+		dropdown.style.display = 'none';
+		navbar_dropdown.style.right = '0px';
+	}
+}
+
 window.onload = function () {
 	const headerEffect = document.querySelector('.header-effect');
 	window.addEventListener('scroll', () => {
@@ -54,21 +66,21 @@ window.onload = function () {
 };
 
 function selectChoice(element) {
-    var choices = document.querySelectorAll('.choice-prefix, .choice-text');
-    for (var i = 0; i < choices.length; i++) {
-        choices[i].classList.remove('clicked');
-    }
-    element.classList.add('clicked');
-    
-    // Menemukan elemen .choice-prefix terkait dan menambahkan kelas clicked kepadanya juga
-    var choicePrefix = element.closest('.choice').querySelector('.choice-prefix');
-    choicePrefix.classList.add('clicked');
+	var choices = document.querySelectorAll('.choice-prefix, .choice-text');
+	for (var i = 0; i < choices.length; i++) {
+		choices[i].classList.remove('clicked');
+	}
+	element.classList.add('clicked');
+
+	// Menemukan elemen .choice-prefix terkait dan menambahkan kelas clicked kepadanya juga
+	var choicePrefix = element.closest('.choice').querySelector('.choice-prefix');
+	choicePrefix.classList.add('clicked');
 }
 
 function selectNumber(element) {
-    var numbers = document.querySelectorAll('.number-box');
-    for (var i = 0; i < numbers.length; i++) {
-        numbers[i].classList.remove('selected');
-    }
-    element.classList.add('selected');
+	var numbers = document.querySelectorAll('.number-box');
+	for (var i = 0; i < numbers.length; i++) {
+		numbers[i].classList.remove('selected');
+	}
+	element.classList.add('selected');
 }
