@@ -826,21 +826,23 @@ button:hover {
   text-decoration: underline;
 }
 
-/* CSS PELATIHAN */
-#page-pelatihan {
+/* CSS SOAL */
+#page-soal {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background: linear-gradient(
-    180deg,
-    rgba(227, 228, 228, 0.33) 0%,
-    #fff4f6 100%
-  );
+  background: linear-gradient(97deg, #e3e3e3 2.97%, #eddeb7 120.26%);
   width: 100%;
   gap: 10rem;
 }
-
+#header-soal {
+  display: flex;
+  background-color: #fff4f6;
+}
+#header-container h1 {
+  color: #4b5c98;
+}
 .box {
   display: flex;
   width: 100%;
@@ -854,7 +856,7 @@ button:hover {
   align-items: center;
   justify-content: center;
   text-align: center;
-  background-color: #fff;
+  background-color: #fffefe;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 #number-container {
@@ -862,7 +864,6 @@ button:hover {
   flex-wrap: wrap;
   justify-content: flex-start;
   align-items: center;
-  width: 100%;
   padding-inline: 25px;
 }
 .number-box {
