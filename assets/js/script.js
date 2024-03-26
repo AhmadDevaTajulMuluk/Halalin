@@ -100,17 +100,7 @@ window.onload = function () {
 	});
 };
 
-function selectChoice(element) {
-	var choices = document.querySelectorAll('.choice-prefix, .choice-text');
-	for (var i = 0; i < choices.length; i++) {
-		choices[i].classList.remove('clicked');
-	}
-	element.classList.add('clicked');
 
-	// Menemukan elemen .choice-prefix terkait dan menambahkan kelas clicked kepadanya juga
-	var choicePrefix = element.closest('.choice').querySelector('.choice-prefix');
-	choicePrefix.classList.add('clicked');
-}
 
 function selectNumber(element) {
 	var numbers = document.querySelectorAll('.number-box');
@@ -124,3 +114,65 @@ window.addEventListener('load', function () {
 	var mainContent = document.querySelector('body');
 	mainContent.classList.add('fade-in');
 });
+
+function selectChoice(element) {
+    var choices = document.querySelectorAll('.choice-prefix, .choice-text');
+    for (var i = 0; i < choices.length; i++) {
+        choices[i].classList.remove('clicked');
+    }
+
+    if (element.classList.contains('choice-text')) {
+        var prefixElement = element.parentNode.querySelector('.choice-prefix');
+        prefixElement.classList.add('clicked');
+        selectedAnswer = prefixElement.textContent.trim();
+    } else {
+        element.classList.add('clicked');
+        selectedAnswer = element.textContent.trim();
+    }
+}
+
+var soal1 = {
+    judul: "Soal 1",
+    isi: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta eveniet blanditiis ut pariatur aliquam alias veritatis quos doloribus natus, qui omnis nihil quo voluptatum aspernatur cum incidunt numquam quasi voluptatem!",
+    jawaban: ["Pilihan A", "Pilihan B", "Pilihan C", "Pilihan D"]
+};
+
+var soal2 = {
+    judul: "Soal 2",
+    isi: "a ipsum dolor sit amet, consectetur adipisicing elit. Dicta eveniet blanditiis ut pariatur aliquam alias veritatis quos doloribus natus, qui omnis nihil quo voluptatum aspernatur cum incidunt numquam quasi voluptatem!",
+    jawaban: ["Pilihan E", "Pilihan F", "Pilihan G", "Pilihan H"]
+};
+
+function next(){
+    var soalElement = document.getElementById("soal");
+    var judulSoalElement = document.getElementById("judul-soal");
+    var isiSoalElement = document.getElementById("isi-soal");
+    var jawabanElement = document.getElementById("jawaban");
+	var clickedElements = document.querySelectorAll('.choice-prefix.clicked, .choice-text.clicked');
+    clickedElements.forEach(function(element) {
+        element.classList.remove('clicked');
+    });
+
+    judulSoalElement.textContent = soal2.judul;
+    isiSoalElement.textContent = soal2.isi;
+
+    jawabanElement.innerHTML = "";
+
+    for (var i = 0; i < soal2.jawaban.length; i++) {
+        var choiceElement = document.createElement("div");
+        choiceElement.classList.add("choice");
+        var choicePrefix = document.createElement("p");
+        choicePrefix.classList.add("choice-prefix");
+        choicePrefix.textContent = String.fromCharCode(65 + i); // Generate alphabet A, B, C, D, ...
+        choicePrefix.onclick = selectChoice; // Assign onclick event
+        var choiceText = document.createElement("p");
+        choiceText.classList.add("choice-text");
+        choiceText.textContent = soal2.jawaban[i];
+        choiceText.onclick = selectChoice; // Assign onclick event
+        choiceElement.appendChild(choicePrefix);
+        choiceElement.appendChild(choiceText);
+        jawabanElement.appendChild(choiceElement);
+    }
+
+    selectedAnswer = null; // Set selectedAnswer to null
+}
