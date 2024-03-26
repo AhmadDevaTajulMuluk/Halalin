@@ -47,10 +47,20 @@ function toggleDropdown() {
 	}
 }
 
+function openSoal() {
+	const dropdown = document.getElementById('open-soal');
+	const soal_dropdown = document.getElementById('side-soal-container');
+
+	if (soal_dropdown.style.left === '-260px') {
+		soal_dropdown.style.left = '0px';
+	} else {
+		soal_dropdown.style.left = '-260px';
+	}
+}
+
 window.onload = function () {
 	const headerEffect = document.querySelector('.header-effect');
 	window.addEventListener('scroll', () => {
-		console.log('berhasil');
 		const elementBottom = headerEffect.offsetTop + headerEffect.offsetHeight;
 		if (window.scrollY > elementBottom) {
 			headerEffect.style.position = 'fixed';
