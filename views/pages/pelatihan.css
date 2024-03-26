@@ -85,10 +85,17 @@
 	border-radius: 5px;
 	color: #4b5c98;
 	font-weight: 600;
-	border: 2px solid #4b5c98; /* Border biru */
-	box-shadow: 5px 5px 10px rgba(107, 107, 107, 0.274); /* Box shadow dengan warna biru */
+	border: 1px solid #d6d6d6;
+	box-shadow: 5px 5px 10px rgba(107, 107, 107, 0.274);
+	transition: background-color 0.3s ease, color 0.3s ease;
 	cursor: pointer;
 }
+
+.choice-prefix:hover{
+	border: 1px solid #4b5c98;
+	background-color: #fff;
+	color: #4b5c98;
+  }
 
 .choice-prefix.clicked {
 	background-color: #4b5c98;
@@ -99,6 +106,32 @@
 	display: flex;
 	align-items: center;
 	padding-left: 20px;
+	cursor: pointer;
+}
+
+.next-button {
+	float: right;
+    margin-left: auto;
+    margin-right: 20px;
+    padding: 10px 20px;
+    background-color: #4B5C98;
+    color: #FFF;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.prev-button {
+    margin-left: auto;
+    margin-right: 20px;
+    padding: 10px 20px;
+    background-color: #4B5C98;
+    color: #FFF;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
 }
 
 #side-soal-container {
