@@ -981,3 +981,250 @@ button:hover {
 		font-size: 9px;
 	}
 }
+
+/*BIODATA*/
+#biodata {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: auto;
+	background-color: #fff4f6;
+}
+
+.container-bio{
+	margin: 30px;
+	height: auto;
+}
+
+.wrapper-bio{
+	display: flex;
+	flex-direction: row;
+}
+
+.side-bio{
+	display: flex;
+	flex-direction: column;
+	width: 300px;
+	height: 700px;
+	background-color: white;
+	padding: 30px;
+	border-radius: 30px;
+	justify-content: flex-start;
+	box-shadow: 2px 2px 8px grey;
+	align-items: flex-start;
+}
+
+.side-bio h1{
+	color: #4b5c98;
+	display: flex;
+}
+
+.sidebar-bio{
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: flex-start;
+	align-content: flex-start;
+	gap: 5px;
+}
+
+.sidebar-bio a{
+	text-decoration: none;
+	color: black;
+	font-family: Nunito;
+	font-size: 18px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: normal;
+	background-color: transparent;
+	cursor: pointer;
+	margin: 1rem 0;
+}
+
+.sidebar-bio a:hover {
+	color: #4b5c98;
+	transition: 0.3s;
+}
+.sidebar-bio a.selected {
+	color: #4b5c98;
+	font-weight: 900;
+}
+
+.form-bio{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 1200px;
+	height: 1000px;
+	padding: 30px;
+	border-radius: 20px;
+	margin-left: 30px;
+	background-color: white;
+	justify-content: center;
+	box-shadow: 2px 2px 8px grey;
+}
+
+.form-bio h1{
+	color: #4b5c98;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.field-bio{
+
+}
+
+.field-bio {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	width: 100%;
+	margin: auto;
+	gap: 10px;
+	flex-wrap: wrap;
+}
+
+.field-bio *{
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	color: #4b5c98;
+	font-weight: 600;
+	text-align: left;
+	align-items: flex-start;
+	align-content: flex-start;
+	margin: 2px;
+	width: 70%; /* Lebar input */
+}
+
+.jeniskelamin {
+	display: flex;
+	justify-content: center;
+    text-align: center;
+	flex-wrap: wrap;
+}
+
+.pilihanjeniskelamin {
+    display: flex;
+	flex-direction: row;
+	width: 100%;
+    justify-content: center;
+    align-items: center;
+	flex-wrap: wrap;
+}
+
+.pilihan-radio {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+    position: relative;
+    height: 5rem;
+    width: 150px; /* Set width to auto to prevent overlapping */
+    margin: 1rem;
+}
+
+.pilihan-radio input {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    cursor: pointer;
+    z-index: 2;
+    opacity: 0;
+}
+
+.icon-radio{
+	display: flex;
+	justify-content: center;
+}
+
+.pilihan-radio .icon-radio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    border: 2px solid #4b5c98;
+    border-radius: 10px;
+    transition: all 300ms ease;
+}
+
+.pilihan-radio ion-icon {
+    color: #4b5c98;
+    font-size: 3rem;
+}
+
+.pilihan-radio label {
+	text-align: center;
+    color: #4b5c98;
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.pilihan-radio input:checked + .icon-radio{
+    background-color: white;
+	color: #4b5c98;
+    box-shadow: 0 0 12px #4b5c98;
+}
+
+.pilihan-radio input:hover + .icon-radio {
+    box-shadow: 0 0 12px #4b5c98;
+}
+
+.pilihan-radio input:hover + .icon-radio ion-icon,
+.pilihan-radio input:hover + .icon-radio label {
+    color: red;
+}
+
+
+
+.field-bio input {
+	text-align: left;
+	font-size: 15px;
+	width: 100%;
+	padding: 10px 40px 5px 45px;
+	margin-right: 50px;
+	border: none;
+	border-bottom: 0.5px solid black;
+	background-color: white;
+}
+
+.field-bio input::placeholder {
+	color: #4b5c98;
+	font-weight: 200;
+}
+
+#input {
+	width: 100%;
+	padding: 10px;
+	margin-right: 50px;
+	border: none;
+	background-color: white;
+	text-align: left;
+}
+
+.simpan-btn {
+	display: flex;
+	justify-content: center;
+	margin-top: 15px;
+	padding: 10px;
+	outline: none;
+	border: none;
+	cursor: pointer;
+	width: 20%;
+	height: auto;
+	border-radius: 30px;
+	font-size: 20px;
+	font-weight: 700;
+	color: #fff4f6;
+	background-color: #4b5c98;
+	box-shadow: 3px 3px 8px #b1b1b1, -3px -3px 8px #fff;
+	transition: all 0.5s;
+}
+/*BIODATA*/
