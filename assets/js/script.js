@@ -35,11 +35,11 @@ document.addEventListener('DOMContentLoaded', function () {
 		.catch((error) => console.error('Ada kesalahan:', error));
 });
 
-function toogleDropdown() {
+function toggleDropdown() {
 	const dropdown = document.getElementById('responsive-dropdown');
 	const navbar_dropdown = document.getElementById('nav-container');
 	if (dropdown.style.display === 'none') {
-		dropdown.style.display = 'block';
+		dropdown.style.display = 'inline-flex';
 		navbar_dropdown.style.right = '-200px';
 	} else {
 		dropdown.style.display = 'none';
