@@ -15,8 +15,10 @@ function selectedNavbar() {
 		pelatihanNav.classList.add('selected');
 	} else if (fileName === 'konsultasi.html') {
 		konsultasiNav.classList.add('selected');
-	} else {
+	} else if (fileName === 'dashboard.html') {
 		berandaNav.classList.add('selected');
+	}else {
+		item.classList.remove('selected');
 	}
 }
 
