@@ -21,6 +21,18 @@ body {
     transform: translateY(0);
   }
 }
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.fade-in {
+  opacity: 0;
+  animation: fadeIn ease-in 0.5s forwards;
+}
 header {
   display: flex;
   justify-content: center;
@@ -66,6 +78,11 @@ nav .unselected:hover {
   color: #4b5c98;
   transition: 0.3s;
 }
+nav .selected {
+  font-weight: 700;
+  color: #4b5c98;
+}
+
 .button {
   border-radius: 100px;
   background: #4b5c98;
@@ -295,23 +312,30 @@ button:hover {
 
 /*REGISTER*/
 .wrapper-register {
-  padding: 20px;
   display: flex;
-  align-items: center;
   flex-direction: column;
+  padding: 20px;
+  align-items: center;
+  justify-content: center;
   margin: 0 auto;
   border-radius: 15px;
   background-color: white;
   box-shadow: 13px 13px 20px #cbced1, -5px 1px 20px #cbced1;
-  width: 900px;
+  width: 800px;
   height: auto;
   text-align: center;
-  gap: 25px;
+  gap: 15px;
 }
-
+#register {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #fff4f6;
+}
 .wrapper-register h1 {
   color: #272727;
-  font-size: 30px;
+  font-size: 28px;
 }
 
 .field-register {
@@ -321,12 +345,12 @@ button:hover {
   flex-direction: column;
   width: 100%;
   margin: auto;
-  gap: 20px;
+  gap: 10px;
 }
 
 .field-register input {
   text-align: left;
-  font-size: 18px;
+  font-size: 15px;
   width: 100%;
   padding: 15px 40px 15px 45px;
   margin-right: 50px;
@@ -343,13 +367,21 @@ button:hover {
   position: relative;
   display: flex;
   align-items: center;
-  width: 85%; /* Lebar input */
+  width: 70%; /* Lebar input */
 }
-
+#input {
+  width: 100%;
+  padding: 10px;
+  margin-right: 50px;
+  border: none;
+  border-bottom: 0.5px solid black;
+  background-color: white;
+  text-align: left;
+}
 .field-register svg {
   position: absolute;
-  left: 15px; /* Penyesuaian posisi ikon */
-  height: 20px;
+  left: 10px; /* Penyesuaian posisi ikon */
+  height: 10px;
   fill: #555;
 }
 
@@ -444,15 +476,15 @@ button:hover {
 
 .footer .row {
   width: 100%;
-  margin: 1% 0%;
-  padding: 0.6% 0%;
+  margin: 0.5% 0%;
+  padding: 0.1% 0%;
   color: gray;
-  font-size: 0.8em;
+  font-size: 15px;
 }
 
 .footer .row a {
   text-decoration: none;
-  font-weight: bold;
+  font-weight: thick;
   color: gray;
   transition: 0.5s;
 }
@@ -467,7 +499,7 @@ button:hover {
 
 .footer .row ul li {
   display: inline-block;
-  margin: 0px 30px;
+  margin: 0px 15px;
 }
 
 .footer .row a i {
@@ -491,7 +523,7 @@ button:hover {
 }
 
 /* Konten Artikel */
-#content-article{
+#content-article {
   background-color: #e3e3e3;
 }
 
@@ -551,12 +583,12 @@ button:hover {
 }
 
 /* CSS PELATIHAN */
-.box{
+.box {
   display: flex;
   flex: 1;
 }
 
-.side-soal{
+.side-soal {
   padding: 20px;
   margin: 1px;
   flex: 0 0 260px;
@@ -570,69 +602,67 @@ button:hover {
   height: 55px;
   line-height: 55px;
   margin: 5px;
-  border: 2px solid #4B5C98;
+  border: 2px solid #4b5c98;
   border-radius: 5px;
   display: inline-block;
   font-size: 18px;
   background-color: #fff;
-color: #4B5C98;
-font-weight: 700;
-cursor: pointer;
-box-shadow: 4px 3px 6px rgba(107, 107, 107, 0.274); /* Box shadow dengan warna biru */
+  color: #4b5c98;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 4px 3px 6px rgba(107, 107, 107, 0.274); /* Box shadow dengan warna biru */
 }
 
 .number-box.selected {
-  background-color: #4B5C98;
-  color: #FFF;
-  border-color: #4B5C98;
+  background-color: #4b5c98;
+  color: #fff;
+  border-color: #4b5c98;
 }
 
-.wrapper-soal{
+.wrapper-soal {
   display: flex;
   flex-direction: column;
   position: relative;
   margin: 20px;
 }
 
-.soal{
+.soal {
   flex: 1;
   padding: 25px;
   border-radius: 5px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   margin: 5px;
-  color: #4B4B4B;
+  color: #4b4b4b;
   background-color: #fff;
   font-size: 16px;
 }
 
-.choice{
+.choice {
   display: flex;
-padding-left: 20px;
+  padding-left: 20px;
   margin: 0 0;
   width: 100%;
   font-size: 1.3rem;
   background-color: white;
 }
 
-.choice-prefix{
+.choice-prefix {
   padding: 20px 25px;
-  background-color: #FFF;
-border-radius: 5px;
-  color: #4B5C98;
+  background-color: #fff;
+  border-radius: 5px;
+  color: #4b5c98;
   font-weight: 700;
-border: 2px solid #4B5C98; /* Border biru */
+  border: 2px solid #4b5c98; /* Border biru */
   box-shadow: 5px 5px 10px rgba(107, 107, 107, 0.274); /* Box shadow dengan warna biru */
-cursor: pointer;
+  cursor: pointer;
 }
 
 .choice-prefix.clicked {
-  background-color: #4B5C98;
-  color: #FFF;
+  background-color: #4b5c98;
+  color: #fff;
 }
 
-
-
-.choice-text{
+.choice-text {
   padding: 20px;
-cursor: pointer;
+  cursor: pointer;
 }
