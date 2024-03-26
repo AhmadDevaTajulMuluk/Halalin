@@ -1,18 +1,39 @@
-document.addEventListener("DOMContentLoaded", function () {
-	fetch("../essentials/navbar.html")
-	  .then((response) => response.text())
-	  .then((data) => {
-		document.getElementById("navbar").innerHTML = data;
-	  })
-	  .catch((error) => console.error("Ada kesalahan:", error));
-  
-	fetch("../essentials/footer.html")
-	  .then((response) => response.text())
-	  .then((data) => {
-		document.getElementById("footer").innerHTML = data;
-	  })
-	  .catch((error) => console.error("Ada kesalahan:", error));
-  });
+function selectedNavbar() {
+	const url = window.location.href;
+	const fileName = url.substring(url.lastIndexOf('/') + 1);
+	console.log('fileName:', typeof fileName);
+	const artikelNav = document.querySelector('#artikel-navbar');
+	const pelatihanNav = document.querySelector('#pelatihan-navbar');
+	const konsultasiNav = document.querySelector('#konsultasi-navbar');
+	const berandaNav = document.querySelector('#beranda-navbar');
+	console.log('berandaNav:', berandaNav);
+	if (fileName === 'artikel.html') {
+		artikelNav.classList.add('selected');
+	} else if (fileName === 'pelatihan.html') {
+		pelatihanNav.classList.add('selected');
+	} else if (fileName === 'konsultasi.html') {
+		konsultasiNav.classList.add('selected');
+	} else {
+		berandaNav.classList.add('selected');
+	}
+}
+
+document.addEventListener('DOMContentLoaded', function () {
+	fetch('../essentials/navbar.html')
+		.then((response) => response.text())
+		.then((data) => {
+			document.getElementById('navbar').innerHTML = data;
+			selectedNavbar();
+		})
+		.catch((error) => console.error('Ada kesalahan:', error));
+
+	fetch('../essentials/footer.html')
+		.then((response) => response.text())
+		.then((data) => {
+			document.getElementById('footer').innerHTML = data;
+		})
+		.catch((error) => console.error('Ada kesalahan:', error));
+});
 
 function toogleDropdown() {
 	const dropdown = document.getElementById('responsive-dropdown');
@@ -85,7 +106,7 @@ function selectNumber(element) {
 	element.classList.add('selected');
 }
 
-window.addEventListener("load", function () {
-	var mainContent = document.querySelector("body");
+window.addEventListener('load', function () {
+	var mainContent = document.querySelector('body');
 	mainContent.classList.add('fade-in');
-  });
+});
