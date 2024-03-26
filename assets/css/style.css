@@ -112,7 +112,7 @@ nav a.selected {
 	cursor: pointer;
 }
 .button:hover {
-	background: #001b3f;
+	background: #6e7ba9;
 	transition: 0.3s;
 }
 #nav-container {
@@ -280,8 +280,7 @@ nav a.selected {
 	background: #6e7ba9;
 	transition: 0.3s;
 }
-
-main {
+#page-dashboard {
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -290,6 +289,7 @@ main {
 	width: 100%;
 	gap: 10rem;
 }
+
 #promotion-container {
 	display: flex;
 	justify-content: center;
@@ -580,6 +580,9 @@ button:hover {
 /*REGISTER*/
 
 /* Article Pages */
+#page-artikel {
+	background-color: white;
+}
 .artikel-container {
 	display: flex;
 	text-align: justify;
@@ -589,20 +592,31 @@ button:hover {
 	gap: 5px;
 }
 .artikel-container .artikel-box {
-	background-color: #ffffff;
 	border-radius: 15px;
-	box-shadow: 13px 13px 20px #cbced1, -5px 1px 20px #cbced1;
 	width: 100%;
 	height: auto;
 	gap: 25px;
 }
+.artikel-container .artikel-box img {
+	border-radius: 15px;
+	width: 25%;
+	height: 250px;
+	object-fit: cover;
+}
 .artikel-container .artikel-box article {
 	display: flex;
-	flex-direction: column;
-	background-color: #e3e3e3;
-	margin: 20px;
-	padding: 20px;
+	flex-direction: row;
 	border-radius: 15px;
+	background: linear-gradient(97deg, #e3e3e3 2.97%, #eddeb7 120.26%);
+	margin-bottom: 25px;
+	padding: 30px;
+}
+.content-artikel {
+	margin-left: 30px;
+	margin-right: 30px;
+}
+.artikel-container .artikel-box article h3 {
+	margin-bottom: -5px;
 }
 .artikel-container .artikel-box article a {
 	text-decoration: none;
@@ -619,7 +633,6 @@ button:hover {
 	/* -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
 	mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)); */
 }
-
 .artikel-container #navigator {
 	display: flex;
 	justify-content: center;
@@ -758,6 +771,16 @@ button:hover {
 }
 
 /* CSS PELATIHAN */
+#page-pelatihan {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	background: linear-gradient(180deg, rgba(227, 228, 228, 0.33) 0%, #fff4f6 100%);
+	width: 100%;
+	gap: 10rem;
+}
+
 .box {
 	display: flex;
 	flex: 1;
@@ -856,137 +879,4 @@ button:hover {
 	display: flex;
 	align-items: center;
 	padding-left: 20px;
-}
-
-.box {
-	display: flex;
-	width: 100%;
-	justify-content: center;
-}
-
-.side-soal {
-	padding: 20px;
-	margin: 2px;
-	flex: 0 0 260px;
-	align-items: center;
-	justify-content: center;
-	text-align: center;
-	background-color: #fff;
-	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-#number-container {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: flex-start;
-	align-items: center;
-	width: 100%;
-	padding-inline: 25px;
-}
-.number-box {
-	width: 45px;
-	height: 45px;
-	line-height: 45px;
-	margin: 5px;
-	border: 2px solid #4b5c98;
-	border-radius: 5px;
-	display: inline-block;
-	font-size: 18px;
-	background-color: #fff;
-	color: #4b5c98;
-	font-weight: 700;
-	cursor: pointer;
-	box-shadow: 4px 3px 6px rgba(107, 107, 107, 0.274); /* Box shadow dengan warna biru */
-}
-
-.number-box.selected {
-	background-color: #4b5c98;
-	color: #fff;
-	border-color: #4b5c98;
-}
-
-.wrapper-soal {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	position: relative;
-	margin: 20px;
-	width: 80%;
-}
-
-.soal {
-	flex: 1;
-	padding: 5px 30px 20px 30px;
-	border-radius: 5px;
-	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-	margin: 5px;
-	color: #4b4b4b;
-	background-color: #fff;
-	font-size: 16px;
-}
-.choice-container {
-	display: flex;
-	flex-direction: column;
-}
-.choice {
-	display: flex;
-	padding-left: 20px;
-	margin: 0 0;
-	font-size: 20px;
-	background-color: rgba(255, 255, 255, 0.671);
-}
-
-.choice-prefix {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	height: 45px;
-	width: 45px;
-	background-color: #fff;
-	border-radius: 5px;
-	color: #4b5c98;
-	font-weight: 600;
-	border: 2px solid #4b5c98; /* Border biru */
-	box-shadow: 5px 5px 10px rgba(107, 107, 107, 0.274); /* Box shadow dengan warna biru */
-	cursor: pointer;
-}
-
-.choice-prefix.clicked {
-	background-color: #4b5c98;
-	color: #fff;
-}
-
-.choice-text {
-	display: flex;
-	align-items: center;
-	padding-left: 20px;
-}
-
-#side-soal-container {
-	display: flex;
-	z-index: 999;
-	gap: 0;
-	width: 20%;
-}
-
-#open-soal {
-	display: none;
-	align-self: center;
-	padding: 20px 10px;
-	background-color: #ffffff;
-	margin-left: -7px;
-	border-radius: 0 50px 50px 0;
-	cursor: pointer;
-}
-
-@media screen and (max-width: 790px) {
-	#side-soal-container {
-		position: fixed;
-		top: 0;
-		left: -260px;
-		z-index: 9999;
-		height: 100%;
-	}
-	#open-soal {
-		display: flex;
-	}
 }

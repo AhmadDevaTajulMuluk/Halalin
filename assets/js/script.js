@@ -9,6 +9,8 @@ function selectedNavbar() {
 	console.log('berandaNav:', berandaNav);
 	if (fileName === 'artikel.html') {
 		artikelNav.classList.add('selected');
+		const header = document.getElementById('navbar');
+		header.style.backgroundColor = '#FFF4F6';
 	} else if (fileName === 'pelatihan.html') {
 		pelatihanNav.classList.add('selected');
 	} else if (fileName === 'konsultasi.html') {
@@ -61,12 +63,12 @@ function openSoal() {
 window.onload = function () {
 	const headerEffect = document.querySelector('.header-effect');
 	window.addEventListener('scroll', () => {
+		console.log('berhasil');
 		const elementBottom = headerEffect.offsetTop + headerEffect.offsetHeight;
 		if (window.scrollY > elementBottom) {
 			headerEffect.style.position = 'fixed';
 			headerEffect.style.top = '0px';
 			headerEffect.style.animation = 'fadeInDown 1s'; // Menggunakan properti animation untuk mendefinisikan animasi
-			headerEffect.style.backgroundColor = '#ffffff';
 			headerEffect.style.zIndex = '100';
 			headerEffect.style.width = '100%';
 		} else {
