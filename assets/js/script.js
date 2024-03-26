@@ -1,33 +1,8 @@
 document.addEventListener("DOMContentLoaded", function () {
-	fetch("../essentials/navbar-dashboard.html")
+	fetch("../essentials/navbar.html")
 	  .then((response) => response.text())
 	  .then((data) => {
-		document.getElementById("navbar-dashboard").innerHTML = data;
-		document.getElementById("navbar-dashboard").classList.add("fade-in");
-	  })
-	  .catch((error) => console.error("Ada kesalahan:", error));
-  
-	fetch("../essentials/navbar-artikel.html")
-	  .then((response) => response.text())
-	  .then((data) => {
-		document.getElementById("navbar-artikel").innerHTML = data;
-		document.getElementById("navbar-artikel").classList.add("fade-in");
-	  })
-	  .catch((error) => console.error("Ada kesalahan:", error));
-  
-	fetch("../essentials/navbar-pelatihan.html")
-	  .then((response) => response.text())
-	  .then((data) => {
-		document.getElementById("navbar-pelatihan").innerHTML = data;
-		document.getElementById("navbar-pelatihan").classList.add("fade-in");
-	  })
-	  .catch((error) => console.error("Ada kesalahan:", error));
-  
-	fetch("../essentials/navbar-konsultasi.html")
-	  .then((response) => response.text())
-	  .then((data) => {
-		document.getElementById("navbar-konsultasi").innerHTML = data;
-		document.getElementById("navbar-konsultasi").classList.add("fade-in");
+		document.getElementById("navbar").innerHTML = data;
 	  })
 	  .catch((error) => console.error("Ada kesalahan:", error));
   
@@ -35,7 +10,6 @@ document.addEventListener("DOMContentLoaded", function () {
 	  .then((response) => response.text())
 	  .then((data) => {
 		document.getElementById("footer").innerHTML = data;
-		document.getElementById("navbar-dashboard").classList.add("fade-in");
 	  })
 	  .catch((error) => console.error("Ada kesalahan:", error));
   });

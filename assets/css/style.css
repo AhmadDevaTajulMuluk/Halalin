@@ -78,10 +78,6 @@ nav .unselected:hover {
   color: #4b5c98;
   transition: 0.3s;
 }
-nav .selected {
-  font-weight: 700;
-  color: #4b5c98;
-}
 
 .button {
   border-radius: 100px;
