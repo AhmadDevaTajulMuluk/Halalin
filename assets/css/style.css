@@ -101,24 +101,6 @@ nav a.selected {
 	transition: 0.2s;
 	color: #000000;
 }
-.button {
-	/* border-radius: 100px; */
-	background: #4b5c98;
-	padding: 0.4rem 1.2rem;
-	font-family: Nunito;
-	color: #fff;
-	font-family: Nunito;
-	font-size: 18px;
-	font-style: normal;
-	font-weight: 500;
-	line-height: normal;
-	/* border: #eddeb7 1px solid; */
-	cursor: pointer;
-}
-.button:hover {
-	background: #6e7ba9;
-	transition: 0.3s;
-}
 #nav-container {
 	display: inline-flex;
 	gap: 40px;
@@ -176,7 +158,7 @@ nav a.selected {
 	cursor: pointer;
 }
 .button:hover {
-	background: #6e7ba9;
+	background: #001b3f;
 	transition: 0.3s;
 }
 #page-dashboard {
