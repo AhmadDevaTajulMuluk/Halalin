@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="../../assets/css/style.css" />
+		<link rel="stylesheet" href="pelatihan.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+		<title>Pelatihan</title>
+	</head>
+	<body>
+		<header id="header-soal">
+			<div id="header-container">
+				<h1 style="padding: 0; margin: 0">Hasil Pelatihan </h1>
+			</div>
+		</header>
+		<main>
+			<div class="box">
+				<div id="side-soal-container">
+					<aside class="side-soal">
+						<div class="number-soal">
+							<h1>Soal</h1>
+						</div>
+						<div id="number-container">
+							<div id="number-box-1" class="number-box" onclick="selectNumber(this)">1</div>
+							<div id="number-box-2" class="number-box" onclick="selectNumber(this)">2</div>
+							<div id="number-box-3" class="number-box" onclick="selectNumber(this)">3</div>
+						</div>
+					</aside>
+					<div id="open-soal" onclick="openSoal()">
+						<img src="../../assets/images/dropdown.png" alt="" width="10px" />
+					</div>
+				</div>
+				<div class="wrapper-soal">
+					<div class="soal" id="soal">
+						<div id="soal-container">
+                            <div class="benar">
+                                <h1> <i class="fa-solid fa-check"></i>Benar</h1>
+                            </div>
+                            
+							<h1 id="judul-soal">Soal 1</h1>
+							<p id="isi-soal" style="font-size: 18px" >
+								Lorem ipsum dolor sit amet, 
+							</p>
+						</div>
+						<div class="choice-container">
+							<div class="choice">
+								<p class="choice-prefix" onclick="selectChoice(this)">A</p>
+								<p class="choice-text" onclick="selectChoice(this)">Pilihan A</p>
+							</div>
+							<div class="choice">
+								<p class="choice-prefix" onclick="selectChoice(this)">B</p>
+								<p class="choice-text" onclick="selectChoice(this)">Pilihan B</p>
+							</div>
+							<div class="choice">
+								<p class="choice-prefix" onclick="selectChoice(this)">C</p>
+								<p class="choice-text" onclick="selectChoice(this)">Pilihan C</p>
+							</div>
+							<div class="choice">
+								<p class="choice-prefix" onclick="selectChoice(this)">D</p>
+								<p class="choice-text" onclick="selectChoice(this)">Pilihan D</p>
+							</div>
+						</div>
+					</div>
+                    <div class="soal" id="soal">
+						<div id="soal-container">
+                            <div class="salah">
+                                <h1> <i class="fa-solid fa-xmark"></i>Salah</h1>
+                            </div>
+                            
+							<h1 id="judul-soal">Soal 2</h1>
+							<p id="isi-soal" style="font-size: 18px" >
+								Lorem ipsum dolor sit amet, 
+							</p>
+						</div>
+						<div class="choice-container">
+							<div class="choice">
+								<p class="choice-prefix" onclick="selectChoice(this)">A</p>
+								<p class="choice-text" onclick="selectChoice(this)">Pilihan A</p>
+							</div>
+							<div class="choice">
+								<p class="choice-prefix" onclick="selectChoice(this)">B</p>
+								<p class="choice-text" onclick="selectChoice(this)">Pilihan B</p>
+							</div>
+							<div class="choice">
+								<p class="choice-prefix" onclick="selectChoice(this)">C</p>
+								<p class="choice-text" onclick="selectChoice(this)">Pilihan C</p>
+							</div>
+							<div class="choice">
+								<p class="choice-prefix" onclick="selectChoice(this)">D</p>
+								<p class="choice-text" onclick="selectChoice(this)">Pilihan D</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+		<script type="text/javascript" src="../../assets/js/script.js"></script>
+	</body>
+</html>

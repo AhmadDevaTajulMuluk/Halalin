@@ -238,3 +238,23 @@ function next() {
 
   selectedAnswer = null; // Set selectedAnswer to null
 }
+
+document.getElementById("kumpul-btn").addEventListener("click", kumpulkan);
+function kumpulkan() {
+    showPopup(); 
+}
+
+function showPopup() {
+    document.getElementById("konfirmasi-popup").style.display = "block";
+}
+
+function closePopup() {
+    document.getElementById("konfirmasi-popup").style.display = "none";
+}
+
+function submitData() {
+    alert("Data telah berhasil dikumpulkan!");
+
+	window.location.href = "summary.html";
+    // closePopup();
+}
