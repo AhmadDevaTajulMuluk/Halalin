@@ -106,6 +106,10 @@ nav a.selected {
 	gap: 40px;
 	/* border: 1px solid red; */
 }
+#nav-container img:hover {
+	transform: scale(1.05);
+	transition: 0.3s;
+}
 .navbar-items {
 	display: flex;
 	flex-direction: row;
@@ -979,6 +983,10 @@ button:hover {
 	#responsive-dropdown {
 		display: inline-flex;
 		cursor: pointer;
+	}
+	#responsive-dropdown:hover {
+		transform: scale(1.1);
+		transition: 0.2s;
 	}
 	#responsive-dropdown.disable {
 		display: none;
