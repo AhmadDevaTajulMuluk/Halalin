@@ -708,7 +708,8 @@ button:hover {
 }
 
 /* CSS SOAL */
-#page-soal {
+#page-soal,
+#page-hasil{
 	display: flex;
 	justify-content: center;
 	align-items: center;
