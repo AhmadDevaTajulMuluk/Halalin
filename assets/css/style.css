@@ -993,6 +993,25 @@ button:hover {
 	margin-right: 15px;
 }
 
+.skor{
+    font-size: 2rem;
+	background-color: #4B5C98;
+	border-radius: 50px;
+	color: #fff;
+}
+
+.detail{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 1.3rem;
+}
+
+.detail p{
+	margin: 0;
+	padding-right: 50px;
+}
+
 @media screen and (max-width: 790px) {
 	#side-soal-container {
 		flex: 0 0 100%;
