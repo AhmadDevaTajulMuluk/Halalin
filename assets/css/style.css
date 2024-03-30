@@ -862,6 +862,7 @@ button:hover {
 
 #side-soal-container {
 	display: flex;
+	flex: 0 0 260px;
 	z-index: 999;
 	gap: 0;
 	width: 20%;
@@ -952,6 +953,7 @@ button:hover {
 
 @media screen and (max-width: 790px) {
 	#side-soal-container {
+		flex: 0 0 100%;
 		position: fixed;
 		top: 0;
 		left: -260px;
