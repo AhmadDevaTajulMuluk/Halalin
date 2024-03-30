@@ -885,42 +885,76 @@ button:hover {
 }
 
 .popup {
-	display: none;
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background-color: rgba(0, 0, 0, 0.5); /* Transparan */
-	z-index: 9999;
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+	
 }
+
+.popup-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+    z-index: 9998; 
+}
+
+.popup-overlay.show {
+    display: block; 
+}
+
+.popup.show {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: popIn 0.3s ease forwards; 
+}
+
+
 
 .popup-content {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	background-color: #fff;
-	padding: 20px;
-	border-radius: 5px;
-	box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-	text-align: center;
+    position: absolute;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+	animation: slideIn 0.3s ease forwards;
+	transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
-.popup-content button {
-	background-color: #4b5c98;
+.popup-content button{
+	background-color: #4B5C98;
 	padding: 10px 20px;
 	gap: 2px;
-	color: #fff;
-	border: none;
-	border-radius: 5px;
-	cursor: pointer;
-	font-size: 16px;
+    color: #FFF;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
 }
 
-.popup-content button:hover {
+.popup-content button:hover{
 	background-color: #252e50;
 	color: #fff;
+}
+
+@keyframes popIn {
+    from {
+        transform: scale(0.5); 
+        opacity: 0; 
+    }
+    to {
+        transform: scale(1); 
+        opacity: 1; 
+    }
 }
 
 .benar {
@@ -933,6 +967,7 @@ button:hover {
 	align-items: center;
 	padding: 10px;
 	font-weight: bold;
+	font-size: 1.5rem;
 	color: #14f000;
 }
 
@@ -950,6 +985,7 @@ button:hover {
 	align-items: center;
 	padding: 10px;
 	font-weight: bold;
+	font-size: 1.5rem;
 	color: #ec110a;
 }
 

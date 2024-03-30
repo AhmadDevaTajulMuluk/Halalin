@@ -236,20 +236,41 @@ function next() {
 
 document.getElementById("kumpul-btn").addEventListener("click", kumpulkan);
 function kumpulkan() {
-	showPopup();
+    showPopup(); 
 }
 
 function showPopup() {
-	document.getElementById("konfirmasi-popup").style.display = "block";
+    var popup = document.getElementById("konfirmasi-popup");
+	var overlay = document.getElementById("popup-overlay");
+
+    popup.classList.add("show");
+	overlay.classList.add("show");
 }
 
 function closePopup() {
-	document.getElementById("konfirmasi-popup").style.display = "none";
+    var popup = document.getElementById("konfirmasi-popup");
+	var overlay = document.getElementById("popup-overlay");
+
+    popup.classList.remove("show");
+	overlay.classList.remove("show");
 }
 
-function submitData() {
-	alert("Data telah berhasil dikumpulkan!");
+document.getElementById("yes-btn").addEventListener("click", function() {
+  showDonePopup(); 
+});
 
-	window.location.href = "summary.html";
-	// closePopup();
+function showDonePopup() {
+  var popup = document.getElementById("done-popup");
+  popup.classList.add("show");
+}
+
+function selesai() {
+  var popups = document.querySelectorAll(".popup");
+  popups.forEach(function(popup) {
+      popup.classList.remove("show");
+  });
+
+setTimeout(function() {
+      window.location.href = "summary.html";
+  }, 500);
 }

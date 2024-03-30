@@ -23,11 +23,18 @@
 			</div>
 		</header>
 		<main id="page-soal">
+      <div id="popup-overlay" class="popup-overlay"></div>
 			<div id="konfirmasi-popup" class="popup">
 				<div class="popup-content">
 					<p>Apakah Anda yakin ingin mengumpulkan?</p>
-					<button onclick="submitData()">Ya</button>
-					<button onclick="closePopup()">Tidak</button>
+					<button id="yes-btn" onclick="done()">Ya</button>
+					<button onclick="closePopup()" style="background-color:#a0a0a0;">Tidak</button>
+				</div>
+			</div>
+      <div id="done-popup" class="popup">
+				<div class="popup-content">
+					<p>Terima kasih, Jawaban berhasil dikumpulkan</p>
+					<button onclick="selesai()">Selesai dan Lihat Hasil</button>
 				</div>
 			</div>
 			<div class="box">
