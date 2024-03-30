@@ -106,7 +106,7 @@ nav a.selected {
 	gap: 40px;
 	/* border: 1px solid red; */
 }
-#nav-container img:hover {
+.user-container:hover {
 	transform: scale(1.05);
 	transition: 0.3s;
 }
