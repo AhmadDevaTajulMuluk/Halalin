@@ -325,3 +325,26 @@ function selesai() {
 		window.location.href = "summary.html";
 	}, 500);
 }
+
+function roomChat() {
+	window.location.href = "../pages/chat-sedangtaaruf.html";
+}
+
+document.getElementsByClassName("notify-item").addEventListener("click", lihatnotif);
+function lihatnotif() {
+	showPopup();
+}
+
+// masih belum berhasil help
+var boxNotif = document.getElementById("boxnotif");
+var down = false;
+function showNotif() {
+	if (down) {
+		boxNotif.style.height = "0px";
+		boxNotif.style.opacity = 0;
+		down = false;
+	} else {
+		boxNotif.style.opacity = 1;
+		down = true;
+	}
+}

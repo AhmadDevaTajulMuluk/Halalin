@@ -99,7 +99,9 @@
 								<input type="username" class="namalengkap-input" placeholder="Masukkan suku anda" />
 							</div>
 						</div>
-						<button class="simpan-btn">Simpan</button>
+						<div class="divbutton">
+							<button class="simpan-btn">Simpan</button>
+							</div>
 					</div>
 
 					<div class="form-bio" id="gambaran-diri-form" style="display: none;">
@@ -134,7 +136,9 @@
 								<input type="username" class="alasan-input" placeholder="Jelaskan alasan anda taaruf" />
 							</div>
 						</div>
-						<button class="simpan-btn">Simpan</button>
+						<div class="divbutton">
+							<button class="simpan-btn">Simpan</button>
+							</div>
 					</div>
 
 					<div class="form-bio" id="gambaran-keluarga-form" style="display: none;">
@@ -176,7 +180,9 @@
 								</select>
 							</div>
 						</div>
+						<div class="divbutton">
 						<button class="simpan-btn">Simpan</button>
+						</div>
 					</div>
 
 					<div class="form-bio" id="pendidikan-form" style="display: none;">
@@ -219,7 +225,9 @@
 								<input type="username" class="jurusans1-input" placeholder="Apa jurusan yang anda ikuti" />
 							</div>
 						</div>
-						<button class="simpan-btn">Simpan</button>
+						<div class="divbutton">
+							<button class="simpan-btn">Simpan</button>
+							</div>
 					</div>
 
 					<div class="form-bio" id="ibadah-form" style="display: none;">
@@ -263,7 +271,9 @@
 								<input type="username" class="pertanyaan5-input" placeholder="Jelaskan pendapat anda" />
 							</div>
 						</div>
-						<button class="simpan-btn">Simpan</button>
+						<div class="divbutton">
+							<button class="simpan-btn">Simpan</button>
+							</div>
 					</div>
 
 					<div class="form-bio" id="gambaran-fisik-form" style="display: none;">
@@ -377,10 +387,14 @@
 									class="hobi-input"
 									placeholder="Jelaskan cacat fisik anda" />
 							</div>
-						<button class="simpan-btn">Simpan</button>
 					</div>
+					<div class="divbutton">
+						<button class="simpan-btn">Simpan</button>
+						</div>
 			</div>
+			
 		</div>
+
 		<!----Icon Jenis Kelamin--->
 		<script
 			type="module"
@@ -397,7 +411,7 @@
 
 			function showForm(formId) {
 				// Hide all forms first
-				var forms = document.getElementsByClassName('form-bio');
+				let forms = document.getElementsByClassName('form-bio');
 				for (var i = 0; i < forms.length; i++) {
 					forms[i].style.display = 'none';
 				}
