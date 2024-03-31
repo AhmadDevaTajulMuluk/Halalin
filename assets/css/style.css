@@ -1405,6 +1405,29 @@ button:hover {
   font-size: 16px;
 }
 
+.pilihanriwayatpenyakit {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  margin: 0px 0px 0px 0px;
+  padding: 0px;
+}
+.pilihanriwayatpenyakit input {
+  display: flex;
+  flex-direction: row;
+  margin: 0px 0px 0px 0px;
+  padding: 0px;
+}
+
+.pilihanriwayatpenyakit label {
+  display: flex;
+  justify-content: flex-start;
+}
+.wrapperpilihanpenyakit {
+  margin: 0;
+  padding: 0;
+}
+
 .field-bio input {
   text-align: left;
   font-size: 15px;

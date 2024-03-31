@@ -97,70 +97,76 @@
 					</div>
 
 					<div class="form-bio" id="gambaran-fisik-form" style="display: none;">
-						<h1>gambaran-fisik</h1>
+						<h1>Gambaran Fisik</h1>
 						<div class="field-bio">
-							<div class="foto">
-								<p>Foto</p>
-								<div class="profile-foto">
-									<div class="pilihfoto">
-										<img src="/assets/images/defaultpic.png" id="profilepic">
-										<div>
-										<label for="input-foto">Upload image</label>
-										<input type="file" accept="image/jpeg, image/png, image/jpg" id="input-foto"></div>
-									</div>
-								</div>
-							</div>
-							<div class="username">
-								<p>Username</p>
-								<input
-									type="username"
-									class="namalengkap-input"
-									placeholder="Masukkan nama lengkap" />
-							</div>
-							<div class="nomortelepon">
-								<p>Nomor Telepon</p>
-								<input type="username" class="namalengkap-input" placeholder="Masukkan nomor telepon" />
-							</div>
-							<div class="tempatlahir">
-								<p>Tempat Lahir</p>
-								<input type="username" class="namalengkap-input" placeholder="Masukkan tempat lahir" />
-							</div>
-							<div class="tanggallahir">
-								<p>Tanggal Lahir</p>
-								<input type="date" class="namalengkap-input" placeholder="Nama lengkap" />
-							</div>
-							<div class="jeniskelamin">
-								<p>Jenis Kelamin</p>
-								<div class="pilihanjeniskelamin">
-									<div class="pilihan-radio">
-										<input type="radio" id="laki-laki" name="jenis_kelamin" value="Laki-laki" />
-										<div class="icon-radio">
-											<ion-icon name="man"></ion-icon>
-											<label for="laki-laki">Laki-laki</label>
-										</div>
-									</div>
-									<div class="pilihan-radio">
-										<input type="radio" id="perempuan" name="jenis_kelamin" value="Perempuan" />
-										<div class="icon-radio">
-											<ion-icon name="woman"></ion-icon>
-											<label for="perempuan">Perempuan</label>
-										</div>
-									</div>
-								</div>
-							</div>
 							<div class="status">
-								<p>Status</p>
+								<p>Warna Kulit</p>
 								<select class="pilihanstatus">
-									<option value="-" disabled selected>--- Pilih Status Anda ---</option>
-  									<option value="Belum menikah">Belum Menikah</option>
-  									<option value="Janda">Cerai</option>
+									<option value="-" disabled selected>--- Pilih Warna Kulit Anda ---</option>
+  									<option value="Putih">Putih</option>
+  									<option value="Putih Kemerahan">Putih Kemerahan</option>
+  									<option value="Putih Kecoklatan">Putih Kecoklatan</option>
+  									<option value="Coklat Sawo Matang">Coklat Sawo Matang</option>
+  									<option value="Coklat Kehitaman">Coklat Kehitaman</option>
+  									<option value="Gelap">Gelap</option>
 								</select>
 							</div>
-							<div class="namalengkap">
-								<p>Suku</p>
-								<input type="username" class="namalengkap-input" placeholder="Masukkan suku anda" />
+							<div class="status">
+								<p>Warna Rambut</p>
+								<select class="pilihanstatus">
+									<option value="-" disabled selected>--- Pilih Warna Rambut Anda ---</option>
+  									<option value="Hitam">Hitam</option>
+  									<option value="Coklat">Coklat</option>
+  									<option value="Pirang">Pirang</option>
+  									<option value="Coklat Sawo Matang">Coklat Sawo Matang</option>
+  									<option value="Coklat Kehitaman">Coklat Kehitaman</option>
+  									<option value="Gelap">Gelap</option>
+								</select>
 							</div>
-						</div>
+							<div class="status">
+								<p>Tipe Rambut</p>
+								<select class="pilihanstatus">
+									<option value="-" disabled selected>--- Pilih Tipe Rambut Anda ---</option>
+  									<option value="Lurus">Lurus</option>
+  									<option value="Bergelombang">Bergelombang</option>
+  									<option value="Ikal">Ikal</option>
+  									<option value="Keriting">Keriting</option>
+								</select>
+							</div>
+							<div class="tinggibadan">
+								<p>Tinggi Badan (cm)</p>
+								<input
+									type="number"
+									class="tinggibadan-input"
+									placeholder="Masukkan tinggi badan anda" />
+							</div>
+							<div class="tinggibadan">
+								<p>Berat Badan (kg)</p>
+								<input
+									type="number"
+									class="beratbadan-input"
+									placeholder="Masukkan berat badan anda" />
+							</div>
+							<div class="hobi">
+								<p>Hobi Kesukaan</p>
+								<input
+									type="username"
+									class="hobi-input"
+									placeholder="Masukkan hobi anda" />
+							</div>
+							<div class="riwayatpenyakit">
+								<p>Apakah anda memiliki riwayat penyakit?</p>
+								<div class="wrapperpilihanpenyakit">
+									<div class="pilihanriwayatpenyakit">
+										<input type="radio" name="riwayatpenyakit" value="Ya">
+										<label for="html">Ya, saya memiliki riwayat penyakit</label> <br>
+									</div>
+									<div class="pilihanriwayatpenyakit">
+										<input type="radio" id="css" name="riwayatpenyakit" value="Tidak">
+										<label for="Tidak">Tidak, saya tidak memiliki riwayat penyakit</label>
+									</div>
+								</div>
+							</div>
 						<button class="simpan-btn">Simpan</button>
 					</div>
 				</div>
