@@ -1267,7 +1267,7 @@ font-size: 1.2rem;
   text-decoration: none;
   color: black;
   font-family: Nunito;
-  font-size: 18px;
+  font-size: 1.1rem;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
@@ -1291,10 +1291,10 @@ font-size: 1.2rem;
   align-items: center;
   width: 80%;
   height: auto;
-  padding: 30px;
-  border-radius: 20px;
-  margin-left: 30px;
-  margin-bottom: 100px;
+  padding: 1.8rem;
+  border-radius: 1.25rem;
+  margin-left: 1.8rem;
+  margin-bottom: 6.25rem;
   background-color: white;
   justify-content: center;
   box-shadow: 2px 2px 8px grey;
@@ -1313,7 +1313,7 @@ font-size: 1.2rem;
   flex-direction: column;
   width: 100%;
   margin: auto;
-  gap: 10px;
+  gap: 0.6rem;
   flex-wrap: wrap;
 }
 
@@ -1326,7 +1326,7 @@ font-size: 1.2rem;
   text-align: left;
   align-items: flex-start;
   align-content: flex-start;
-  margin: 2px;
+  margin: 0.2rem;
   width: 70%; /* Lebar input */
 }
 
@@ -1341,12 +1341,12 @@ font-size: 1.2rem;
 .pilihfoto label {
   display: block;
   text-align: center;
-  width: 200px;
+  width: 10rem;
   background: #4b5c98;
   color: white;
-  padding: 12px;
-  margin: 10px auto;
-  border-radius: 5px;
+  padding: 0.75rem;
+  margin: 0.7rem auto;
+  border-radius: 0.4rem;
   cursor: pointer;
 }
 
@@ -1358,18 +1358,18 @@ font-size: 1.2rem;
   width: 100%;
   justify-content: center;
   align-items: center;
-  padding: 30px;
+  padding: 1.9rem;
   text-align: center;
 }
 
 #profilepic {
   align-items: center;
   flex-wrap: wrap;
-  width: 180px;
-  height: 180px;
+  width: 12rem;
+  height: 12rem;
   border-radius: 50%;
-  margin-top: 40px;
-  margin-bottom: 30px;
+  margin-top: 2.5rem;
+  margin-bottom: 1.9rem;
   overflow: hidden;
   object-fit: cover;
 }
@@ -1396,7 +1396,7 @@ font-size: 1.2rem;
   justify-content: center;
   position: relative;
   height: 5rem;
-  width: 150px; /* Set width to auto to prevent overlapping */
+  width: 9.5rem;
   margin: 1rem;
 }
 
@@ -1447,7 +1447,7 @@ font-size: 1.2rem;
 .pilihan-radio input:checked + .icon-radio {
   background-color: white;
   color: #4b5c98;
-  box-shadow: 0 0 12px #4b5c98;
+  box-shadow: 0 0 20px #4b5c98;
 }
 
 .pilihan-radio input:hover + .icon-radio {
@@ -1473,7 +1473,7 @@ font-size: 1.2rem;
   border-bottom: 0.5px solid black;
   padding: 5px 30px 5px 15px;
   color: #4b5c98;
-  font-size: 16px;
+  font-size: 1rem;
 }
 
 .pilihanriwayatpenyakit {
@@ -1501,10 +1501,10 @@ font-size: 1.2rem;
 
 .field-bio input {
   text-align: left;
-  font-size: 15px;
+  font-size: 1rem;
   width: 100%;
   padding: 10px 40px 5px 45px;
-  margin-right: 50px;
+  margin-right: 3.2rem;
   border: none;
   border-bottom: 0.5px solid black;
   background-color: white;
@@ -1518,7 +1518,7 @@ font-size: 1.2rem;
 #input {
   width: 100%;
   padding: 10px;
-  margin-right: 50px;
+  margin-right: 3.2rem;
   border: none;
   background-color: white;
   text-align: left;
@@ -1535,14 +1535,14 @@ font-size: 1.2rem;
   display: flex;
   justify-content: center;
   text-align: center;
-  margin-top: 15px;
-  padding: 10px;
+  margin-top: 1rem;
+  padding: 1.2rem;
   outline: none;
   border: none;
   cursor: pointer;
   width: 20%;
   height: auto;
-  border-radius: 30px;
+  border-radius: 2rem;
   font-size: 20px;
   font-weight: 700;
   color: #fff4f6;
@@ -1550,6 +1550,8 @@ font-size: 1.2rem;
   box-shadow: 3px 3px 8px #b1b1b1, -3px -3px 8px #fff;
   transition: all 0.5s;
 }
+
+
 /*BIODATA*/
 
 /* Seacrh */
