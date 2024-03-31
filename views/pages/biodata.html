@@ -21,10 +21,7 @@
 							<a href="#" class="unselected" id="gambaran-diri" onclick="showForm('gambaran-diri')">Gambaran Diri</a>
 							<a href="#" class="unselected" id="gambaran-keluarga" onclick="showForm('gambaran-keluarga')">Gambaran Keluarga</a>
 							<a href="#" class="unselected" id="pendidikan" onclick="showForm('pendidikan')">Pendidikan</a>
-							<a href="#" class="unselected" id="pengalaman" onclick="showForm('pengalaman')">Pengalaman</a>
 							<a href="#" class="unselected" id="ibadah" onclick="showForm('ibadah')">Ibadah</a>
-							<a href="#" class="unselected" id="kriteria-fisik" onclick="showForm('kriteria-fisik')">Kriteria Fisik</a>
-							<a href="#" class="unselected" id="kriteria-nonfisik" onclick="showForm('kriteria-nonfisik')">Kriteria Non Fisik</a>
 						</div>
 					</div>
 					
@@ -80,10 +77,19 @@
 									</div>
 								</div>
 							</div>
+							<div class="pekerjaan">
+								<p>Pekerjaan</p>
+								<input type="username" class="pekerjaan-input" placeholder="Masukkan pekerjaan" />
+							</div>
+							<div class="gaji">
+								<p>Gaji</p>
+								<input type="username" class="gaji-input" placeholder="Masukkan gaji anda perbulan" />
+							</div>
 							<div class="status">
 								<p>Status</p>
 								<select class="pilihanstatus">
 									<option value="-" disabled selected>--- Pilih Status Anda ---</option>
+  									<option value="Sudah menikah">Sudah Menikah</option>
   									<option value="Belum menikah">Belum Menikah</option>
   									<option value="Janda">Cerai</option>
 								</select>
@@ -91,6 +97,170 @@
 							<div class="namalengkap">
 								<p>Suku</p>
 								<input type="username" class="namalengkap-input" placeholder="Masukkan suku anda" />
+							</div>
+						</div>
+						<button class="simpan-btn">Simpan</button>
+					</div>
+
+					<div class="form-bio" id="gambaran-diri-form" style="display: none;">
+						<h1>Gambaran Diri</h1>
+						<div class="field-bio">
+							<div class="motto">
+								<p>Motto Diri</p>
+								<input type="username" class="motto-input" placeholder="Sebutkan motto diri anda" />
+							</div>
+							<div class="targethidup">
+								<p>Target Hidup</p>
+								<input type="username" class="targethidup-input" placeholder="Sebukan target hidup anda" />
+							</div>
+							<div class="hobi">
+								<p>Hobi</p>
+								<input type="username" class="hobi-input" placeholder="Sebutkan hobi anda" />
+							</div>
+							<div class="haldisukai">
+								<p>Hal yang disukai</p>
+								<input type="username" class="haldisukai-input" placeholder="Jelaskan hal yang disukai anda" />
+							</div>
+							<div class="sifatpositif">
+								<p>Sifat positif</p>
+								<input type="username" class="sifatpositif-input" placeholder="Jelaskan sifat positif anda" />
+							</div>
+							<div class="sifatnegatif">
+								<p>Sifat negatif</p>
+								<input type="username" class="sifatnegatif-input" placeholder="Jelaskan sifat negatif anda" />
+							</div>
+							<div class="alasan">
+								<p>Alasan taaruf</p>
+								<input type="username" class="alasan-input" placeholder="Jelaskan alasan anda taaruf" />
+							</div>
+						</div>
+						<button class="simpan-btn">Simpan</button>
+					</div>
+
+					<div class="form-bio" id="gambaran-keluarga-form" style="display: none;">
+						<h1>Gambaran Keluarga</h1>
+						<div class="field-bio">
+							<div class="namaayah">
+								<p>Nama ayah</p>
+								<input type="username" class="namaayah-input" placeholder="Masukkan nama ayah anda" />
+							</div>
+							<div class="pekerjaanayah">
+								<p>Pekerjaan ayah</p>
+								<input type="username" class="pekerjaanayah-input" placeholder="Masukkan pekerjaan ayah anda" />
+							</div>
+							<div class="namaibu">
+								<p>Nama ibu</p>
+								<input type="username" class="namaibu-input" placeholder="Masukkan nama ibu anda" />
+							</div>
+							<div class="pekerjaanibu">
+								<p>Pekerjaan ibu</p>
+								<input type="username" class="pekerjaanibu-input" placeholder="Masukkan pekerjaan ibu anda" />
+							</div>
+							<div class="jumlahkakak">
+								<p>Jumlah kakak</p>
+								<input type="number" class="jumlahkakak-input" placeholder="Berapa jumlah kakak anda" />
+							</div>
+							<div class="jumlahkakak">
+								<p>Jumlah adik</p>
+								<input type="number" class="jumlahadik-input" placeholder="Berapa jumlah adik anda" />
+							</div>
+							<div class="status">
+								<p>Tulang punggung keluarga</p>
+								<select class="pilihanstatus">
+									<option value="-" disabled selected>--- Pilih tulang punggung keluarga ---</option>
+  									<option value="Saya">Saya</option>
+  									<option value="Ayah">Ayah</option>
+  									<option value="Ibu">Ibu</option>
+  									<option value="Kakak">Kakak</option>
+  									<option value="Adik">Adik</option>
+								</select>
+							</div>
+						</div>
+						<button class="simpan-btn">Simpan</button>
+					</div>
+
+					<div class="form-bio" id="pendidikan-form" style="display: none;">
+						<h1>Pendidikan</h1>
+						<div class="field-bio">
+							<div class="sekolahdasar">
+								<p>Sekolah Dasar (SD)</p>
+								<input type="username" class="sekolahdasar-input" placeholder="Dimana anda bersekolah dasar" />
+							</div>
+							<div class="sekolahmenengahpertama">
+								<p>Sekolah Menengah Pertama (SMP)</p>
+								<input type="username" class="sekolahmenengahpertama-input" placeholder="Dimana anda bersekolah menengah pertama" />
+							</div>
+							<div class="sekolahmenengahatas">
+								<p>Sekolah Menengah Atas (SMA)</p>
+								<input type="username" class="sekolahmenengahatas-input" placeholder="Dimana anda bersekolah menengah atas" />
+							</div>
+							<div class="perguruantinggis1">
+								<p>Perguruan Tinggi (S1)</p>
+								<input type="username" class="perguruantinggis1-input" placeholder="Dimana anda bersekolah perguruan tinggi" />
+							</div>
+							<div class="jurusan">
+								<p>Jurusan</p>
+								<input type="username" class="jurusans1-input" placeholder="Apa jurusan yang anda ikuti" />
+							</div>
+							<div class="perguruantinggis2">
+								<p>Perguruan Tinggi (S2)</p>
+								<input type="username" class="perguruantinggis2-input" placeholder="Dimana anda bersekolah perguruan tinggi" />
+							</div>
+							<div class="jurusan">
+								<p>Jurusan</p>
+								<input type="username" class="jurusans1-input" placeholder="Apa jurusan yang anda ikuti" />
+							</div>
+							<div class="perguruantinggis3">
+								<p>Perguruan Tinggi (S3)</p>
+								<input type="username" class="perguruantinggis3-input" placeholder="Dimana anda bersekolah perguruan tinggi" />
+							</div>
+							<div class="jurusan">
+								<p>Jurusan</p>
+								<input type="username" class="jurusans1-input" placeholder="Apa jurusan yang anda ikuti" />
+							</div>
+						</div>
+						<button class="simpan-btn">Simpan</button>
+					</div>
+
+					<div class="form-bio" id="ibadah-form" style="display: none;">
+						<h1>Ibadah</h1>
+						<div class="field-bio">
+							<div class="hafalan">
+								<p>Hafalan al-quran</p>
+								<input type="username" class="sekolahdasar-input" placeholder="Masukkan hafalan al-quran anda" />
+							</div>
+							<div class="status">
+								<p>Bacaan al-quran</p>
+								<select class="pilihanstatus">
+									<option value="-" disabled selected>--- Pilih Bacaan Al-quran Anda ---</option>
+  									<option value="Lancar">Lancar</option>
+  									<option value="Sedang">Sedang</option>
+  									<option value="Masih belajar">Masih Belajar</option>
+								</select>
+							</div>
+							<div class="kajianustad">
+								<p>Kajian ustad yang diikuti</p>
+								<input type="username" class="kajianustad-input" placeholder="Dimana anda bersekolah menengah atas" />
+							</div>
+							<div class="pertanyaan1">
+								<p>Apa pemahaman Anda tentang akhirat dan persiapannya dalam ajaran Islam?</p>
+								<input type="username" class="pertanyaan1-input" placeholder="Jelaskan pendapat anda" />
+							</div>
+							<div class="pertanyaan2">
+								<p>Apa yang Anda ketahui tentang proses pencarian pasangan hidup (taaruf) dalam Islam dan bagaimana Anda mempersiapkan diri untuk itu?</p>
+								<input type="username" class="pertanyaan2-input" placeholder="Jelaskan pendapat anda" />
+							</div>
+							<div class="pertanyaan3">
+								<p>Bagaimana Anda memahami konsep mahar (maskawin) dalam Islam dan bagaimana Anda menentukan nilai atau jenis mahar yang sesuai?</p>
+								<input type="username" class="pertanyaan3-input" placeholder="Jelaskan pendapat anda" />
+							</div>
+							<div class="pertanyaan4">
+								<p>Bagaimana Anda mengatasi konflik antara kebutuhan untuk memenuhi tuntutan dunia modern dengan menjalankan ajaran agama dalam kehidupan sehari-hari?</p>
+								<input type="username" class="pertanyaan4-input" placeholder="Jelaskan pendapat anda" />
+							</div>
+							<div class="pertanyaan5">
+								<p>Bagaimana Anda memandang pentingnya kesetiaan dalam pernikahan dalam Islam, terutama dalam konteks modern yang penuh dengan godaan dan tantangan?</p>
+								<input type="username" class="pertanyaan5-input" placeholder="Jelaskan pendapat anda" />
 							</div>
 						</div>
 						<button class="simpan-btn">Simpan</button>
@@ -209,7 +379,6 @@
 							</div>
 						<button class="simpan-btn">Simpan</button>
 					</div>
-				</div>
 			</div>
 		</div>
 		<!----Icon Jenis Kelamin--->
@@ -232,9 +401,9 @@
 				for (var i = 0; i < forms.length; i++) {
 					forms[i].style.display = 'none';
 				}
-
+		
 				// Show the selected form
-				document.getElementById(formId + '-form').style.display = 'flex';
+				document.getElementById(formId + '-form').style.display = 'block';
 			}
 		</script>
 	</body>
