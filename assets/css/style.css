@@ -875,7 +875,7 @@ button:hover {
   align-items: center;
   justify-content: center;
   text-align: center;
-  background-color: #fffefe;
+  background: linear-gradient(180deg, #f3e7ff 0%, #f8eff1 100%);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 #number-container {
@@ -930,12 +930,16 @@ button:hover {
 .choice-container {
   display: flex;
   flex-direction: column;
+  gap: 12px;
+}
+.choice-container p {
+  margin: 0;
 }
 .choice {
   display: flex;
   padding-left: 20px;
   margin: 0 0;
-  font-size: 20px;
+  font-size: 18px;
   background-color: rgba(255, 255, 255, 0.671);
 }
 
@@ -1012,7 +1016,7 @@ button:hover {
 
 .skor h1 {
   font-size: 1.5rem;
-  background-color: #fff;
+  background-color: #f3e7fe;
   color: #4b4b4b;
 }
 
@@ -1026,6 +1030,9 @@ button:hover {
   font-size: 1.8rem;
   font-weight: 700;
   text-align: center;
+}
+.summary p {
+  font-size: 18px;
 }
 
 .summary-true {
@@ -1951,7 +1958,7 @@ main#main-pelatihan {
   flex-direction: row;
   justify-content: center;
   width: 100%;
-  background-color: white;
+  background-color: rgb(250, 245, 245);
 }
 .hide-item {
   opacity: 0;
@@ -1964,13 +1971,14 @@ main#main-pelatihan {
   width: 20%;
   min-height: 500px;
   padding: 10px 30px;
-  background-color: white;
+  background: linear-gradient(180deg, #f3e7ff 0%, #f8eff1 100%);
   border: 1px solid #d6d6d6;
 }
 aside#sidebar-pelatihan {
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  position: fixed;
 }
 .percentage {
   display: flex;
@@ -2066,11 +2074,13 @@ aside#sidebar-pelatihan {
   border-radius: 10px;
   margin: 10px auto;
 }
-footer#pelatihan-footer {
+#pelatihan-footer {
   display: flex;
+  width: 100%;
   justify-content: space-between;
   align-items: center;
-  margin: 0 20px;
+  padding: 0 20px;
+  background-color: #fff4f6;
 }
 .fledir-row {
   display: flex;
