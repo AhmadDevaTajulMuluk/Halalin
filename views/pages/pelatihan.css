@@ -1,7 +1,6 @@
 body#pelatihan {
 	max-height: calc(100% - 138px);
 }
-
 main#main-pelatihan {
 	display: flex;
 	flex-direction: row;
@@ -9,7 +8,9 @@ main#main-pelatihan {
 	width: 100%;
 	background-color: white;
 }
-
+.hide-item {
+	opacity: 0;
+}
 aside#sidebar-pelatihan {
 	display: flex;
 	flex-direction: column;
@@ -31,7 +32,7 @@ aside#sidebar-pelatihan {
 	border-radius: 5px;
 }
 .percentage-line::after {
-	width: 80%;
+	width: 0%;
 	content: "";
 	height: 5px;
 	background-color: #4b5c98;
