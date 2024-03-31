@@ -188,50 +188,90 @@ function selectChoice(element) {
 	}
 }
 
-var soal1 = {
-	judul: "Soal 1",
-	isi: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta eveniet blanditiis ut pariatur aliquam alias veritatis quos doloribus natus, qui omnis nihil quo voluptatum aspernatur cum incidunt numquam quasi voluptatem!",
-	jawaban: ["Pilihan A", "Pilihan B", "Pilihan C", "Pilihan D"],
-};
+var soal = [
+    {
+        judul: "Soal 1",
+        isi: "Apa yang dimaksud dengan",
+        jawaban: ["Pilihan A", "Pilihan B", "Pilihan C", "Pilihan D"]
+    },
+    {
+        judul: "Soal 2",
+        isi: "Sebutkan bla",
+        jawaban: ["Pilihan A", "Pilihan B", "Pilihan C", "Pilihan D"]
+    },
+    {
+        judul: "Soal 3",
+        isi: "Pertanyaan tentang ...",
+        jawaban: ["Pilihan A", "Pilihan B", "Pilihan C", "Pilihan D"]
+    }
+];
 
-var soal2 = {
-	judul: "Soal 2",
-	isi: "a ipsum dolor sit amet, consectetur adipisicing elit. Dicta eveniet blanditiis ut pariatur aliquam alias veritatis quos doloribus natus, qui omnis nihil quo voluptatum aspernatur cum incidunt numquam quasi voluptatem!",
-	jawaban: ["Pilihan E", "Pilihan F", "Pilihan G", "Pilihan H"],
-};
+function tampilkanSoal(index) {
+    var judulSoalElement = document.getElementById("judul-soal");
+    var isiSoalElement = document.getElementById("isi-soal");
+    var jawabanElement = document.querySelector("#jawaban");
+    var clickedElements = document.querySelectorAll('.choice-prefix.clicked, .choice-text.clicked');
+    clickedElements.forEach(function(element) {
+        element.classList.remove('clicked');
+    });
 
-function next() {
-	var soalElement = document.getElementById("soal");
-	var judulSoalElement = document.getElementById("judul-soal");
-	var isiSoalElement = document.getElementById("isi-soal");
-	var jawabanElement = document.getElementById("jawaban");
-	var clickedElements = document.querySelectorAll(".choice-prefix.clicked, .choice-text.clicked");
-	clickedElements.forEach(function (element) {
-		element.classList.remove("clicked");
-	});
+    judulSoalElement.innerHTML = soal[index].judul;
+    isiSoalElement.innerHTML = soal[index].isi;
 
-	judulSoalElement.textContent = soal2.judul;
-	isiSoalElement.textContent = soal2.isi;
+    jawabanElement.innerHTML = "";
 
-	jawabanElement.innerHTML = "";
+    for (var i = 0; i < soal[index].jawaban.length; i++) {
+        var choiceElement = document.createElement("div");
+        choiceElement.classList.add("choice");
+        var choicePrefix = document.createElement("p");
+        choicePrefix.classList.add("choice-prefix");
+        choicePrefix.onclick = selectChoice;
+        var choiceText = document.createElement("p");
+        choiceText.classList.add("choice-text");
+        choiceText.textContent = soal[index].jawaban[i];
+        choiceText.onclick = selectChoice; 
+        choiceElement.appendChild(choicePrefix);
+        choiceElement.appendChild(choiceText);
+        jawabanElement.appendChild(choiceElement);
+    }
+	
+}
 
-	for (var i = 0; i < soal2.jawaban.length; i++) {
-		var choiceElement = document.createElement("div");
-		choiceElement.classList.add("choice");
-		var choicePrefix = document.createElement("p");
-		choicePrefix.classList.add("choice-prefix");
-		choicePrefix.textContent = String.fromCharCode(65 + i); // Generate alphabet A, B, C, D, ...
-		choicePrefix.onclick = selectChoice; // Assign onclick event
-		var choiceText = document.createElement("p");
-		choiceText.classList.add("choice-text");
-		choiceText.textContent = soal2.jawaban[i];
-		choiceText.onclick = selectChoice; // Assign onclick event
-		choiceElement.appendChild(choicePrefix);
-		choiceElement.appendChild(choiceText);
-		jawabanElement.appendChild(choiceElement);
-	}
+document.addEventListener("DOMContentLoaded", function() {
+	tampilkanSoal(currentSoal);
 
-	selectedAnswer = null; // Set selectedAnswer to null
+});
+
+var currentSoal = 0;
+function next(){
+    if (currentSoal < soal.length - 1) {
+        currentSoal++;
+        if (currentSoal === 1) {
+            document.querySelector('.prev-button').style.display = 'inline';
+        }
+		if (currentSoal === soal.length - 1) {
+        document.querySelector('.next-button').style.display = 'none';
+    	}
+    }
+
+    tampilkanSoal(currentSoal);
+
+    selectedAnswer = null;
+}
+
+function prev() {
+
+	if (currentSoal > 0) {
+        currentSoal--;
+        if (currentSoal === 0) {
+            document.querySelector('.prev-button').style.display = 'none';
+        }
+        document.querySelector('.next-button').style.display = 'inline';
+    }
+
+    tampilkanSoal(currentSoal);
+
+    selectedAnswer = null;
 }
 
 document.getElementById("kumpul-btn").addEventListener("click", kumpulkan);
