@@ -1710,140 +1710,191 @@ input[type="text"] {
 
 /* CHAT */
 #page-chat {
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-}
-.header-chat {
-  display: flex;
-  height: 12%;
-  background-color: #fff4f6;
-  justify-content: center;
-}
-.headerchat-container {
-  display: flex;
-  width: 95%;
-  justify-content: space-between;
-}
-.header-left {
-  display: flex;
-  flex-direction: row;
-  gap: 1rem;
-  align-items: center;
-}
-.roomchat-name {
-  color: #4b5c98;
-  font-weight: bold;
-  font-size: 20px;
-}
-.header-left img {
-  width: 45px;
-  height: 45px;
-  border-radius: 50px;
-}
-.header-right {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-}
-.header-right svg {
-  width: 8%;
-  fill: #979797;
-}
-.roomchat {
-  display: flex;
-  height: 70vh;
-  justify-content: center;
-  background: linear-gradient(180deg, #dddcde 0%, #f8eff1 100%);
-}
-.roomchat-container {
-  display: flex;
-  align-items: center;
-}
-.isi {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-.isi h3 {
-  color: #6e6e6e;
-  font-weight: 700;
-  font-size: 25px;
-  margin-bottom: -12px;
-}
-.isi p {
-  color: #838383;
-  font-weight: 400;
-  font-size: 14px;
-}
-.footer-chat {
-  display: flex;
-  background-color: #fff4f6;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0px -3px 11px 0px rgba(0, 0, 0, 0.1);
-  padding: 1rem;
-  padding-inline: 2.5rem;
-}
-.inputbox {
-  width: 320vh;
-  border-radius: 50px;
-  background-color: #f0eaed;
-  box-shadow: 0px 2px 9px 0px rgba(51, 51, 51, 0.1) inset;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding-inline: 10px;
-}
-.inputbox input {
-  display: flex;
-  border: none;
-  border-radius: 50px;
-  background-color: #000;
-  outline: none;
-  background: none;
-  flex: 1;
-  font-size: 15px;
-  padding: 0.8rem;
-  padding-inline: 0.8rem;
-  margin: 0;
-}
-.footer-chat input::placeholder {
-  font-size: 15px;
-}
-
-/* CHATT SEDANG TAARUF */
-.bubblechat-container {
-  display: flex;
-  padding: 20px;
-  flex-direction: column;
-  gap: 10px;
-  width: 95%;
-}
-.bubble-chat {
-  display: flex;
-  align-items: flex-start;
-  gap: 10px;
-}
-#user {
-  display: flex;
-  flex-direction: row-reverse;
-
-  .text p {
-    background-color: #4b5c98;
-    color: white;
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
   }
-}
-.foto img {
-  width: 6vh;
-  height: 6vh;
-  border-radius: 50px;
-}
-
-.text p {
-  background-color: white;
-  padding: 8px;
-  margin: -1px;
-  border-radius: 10px;
-}
+  .header-chat {
+	display: flex;
+	height: 12%;
+	background-color: #fff4f6;
+	justify-content: center;
+  }
+  .headerchat-container {
+	display: flex;
+	width: 95%;
+	justify-content: space-between;
+  }
+  .header-left {
+	display: flex;
+	flex-direction: row;
+	gap: 1rem;
+	align-items: center;
+  }
+  .bg-notif {
+	background: rgba(255, 255, 255, 0.85);
+	gap: 20px;
+	border-radius: 10px;
+  }
+  .notify-box {
+	display: flex;
+	flex-direction: column;
+	padding: 20px;
+	gap: 15px;
+	position: absolute;
+	top: 18%;
+	right: 1%;
+	transition: 1s opacity, 250ms height;
+	h2 {
+	  margin: 0;
+	  font-size: 16px;
+	  padding: 10px;
+	  color: #4b5c98;
+	}
+  }
+  .notify-item {
+	border-radius: 0 0 10px 10px;
+	border-top: 2px solid hsl(252, 26%, 77%);
+	padding: 15px;
+	gap: 10px;
+	h4 {
+	  margin: 0;
+	  color: #7c7c7c;
+	  font-size: 15px;
+	  font-weight: 600;
+	  cursor: pointer;
+	}
+	p {
+	  margin: 0;
+	  color: #818181;
+	  font-size: 12px;
+	}
+  }
+  
+  .roomchat-name {
+	color: #4b5c98;
+	font-weight: bold;
+	font-size: 20px;
+  }
+  .header-left img {
+	width: 45px;
+	height: 45px;
+	border-radius: 50px;
+  }
+  .header-right {
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+  }
+  .icon-notif {
+	display: flex;
+	justify-content: flex-end;
+  }
+  .icon-notif svg {
+	display: flex;
+	width: 8%;
+	fill: #979797;
+	cursor: pointer;
+  }
+  
+  .roomchat {
+	display: flex;
+	height: 70vh;
+	justify-content: center;
+	background: linear-gradient(180deg, #dddcde 0%, #f8eff1 100%);
+  }
+  .roomchat-container {
+	display: flex;
+	align-items: center;
+  }
+  .isi {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+  }
+  .isi h3 {
+	color: #6e6e6e;
+	font-weight: 700;
+	font-size: 25px;
+	margin-bottom: -12px;
+  }
+  .isi p {
+	color: #838383;
+	font-weight: 400;
+	font-size: 14px;
+  }
+  .footer-chat {
+	display: flex;
+	background-color: #fff4f6;
+	align-items: center;
+	justify-content: center;
+	box-shadow: 0px -3px 11px 0px rgba(0, 0, 0, 0.1);
+	padding: 1rem;
+	padding-inline: 2.5rem;
+  }
+  .inputbox {
+	width: 320vh;
+	border-radius: 50px;
+	background-color: #f0eaed;
+	box-shadow: 0px 2px 9px 0px rgba(51, 51, 51, 0.1) inset;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding-inline: 10px;
+  }
+  .inputbox input {
+	display: flex;
+	border: none;
+	border-radius: 50px;
+	background-color: #000;
+	outline: none;
+	background: none;
+	flex: 1;
+	font-size: 15px;
+	padding: 0.8rem;
+	padding-inline: 0.8rem;
+	margin: 0;
+  }
+  .inputbox svg {
+	cursor: pointer;
+  }
+  
+  .footer-chat input::placeholder {
+	font-size: 15px;
+  }
+  
+  /* CHATT SEDANG TAARUF */
+  .bubblechat-container {
+	display: flex;
+	padding: 20px;
+	flex-direction: column;
+	gap: 10px;
+	width: 95%;
+  }
+  .bubble-chat {
+	display: flex;
+	align-items: flex-start;
+	gap: 10px;
+  }
+  #user {
+	display: flex;
+	flex-direction: row-reverse;
+  
+	.text p {
+	  background-color: #4b5c98;
+	  color: white;
+	}
+  }
+  .foto img {
+	width: 6vh;
+	height: 6vh;
+	border-radius: 50px;
+  }
+  
+  .text p {
+	background-color: white;
+	padding: 8px;
+	margin: -1px;
+	border-radius: 10px;
+  }
