@@ -16,23 +16,31 @@
 				<div class="wrapper-bio">
 					<div class="side-bio">
 						<div class="sidebar-bio">
-							<a href="#" class="selected">Profil</a>
-							<a href="#" class="unselected">Gambaran Fisik</a>
-							<a href="#" class="unselected">Gambaran Diri</a>
-							<a href="#" class="unselected">Gambaran Keluarga</a>
-							<a href="#" class="unselected">Pendidikan</a>
-							<a href="#" class="unselected">Pengalaman</a>
-							<a href="#" class="unselected">Ibadah</a>
-							<a href="#" class="unselected">Kriteria Fisik</a>
-							<a href="#" class="unselected">Kriteria Non Fisik</a>
+							<a href="#" class="selected" id="profil" onclick="showForm('profil')">Profil</a>
+							<a href="#" class="unselected" id="gambaran-fisik" onclick="showForm('gambaran-fisik')">Gambaran Fisik</a>
+							<a href="#" class="unselected" id="gambaran-diri" onclick="showForm('gambaran-diri')">Gambaran Diri</a>
+							<a href="#" class="unselected" id="gambaran-keluarga" onclick="showForm('gambaran-keluarga')">Gambaran Keluarga</a>
+							<a href="#" class="unselected" id="pendidikan" onclick="showForm('pendidikan')">Pendidikan</a>
+							<a href="#" class="unselected" id="pengalaman" onclick="showForm('pengalaman')">Pengalaman</a>
+							<a href="#" class="unselected" id="ibadah" onclick="showForm('ibadah')">Ibadah</a>
+							<a href="#" class="unselected" id="kriteria-fisik" onclick="showForm('kriteria-fisik')">Kriteria Fisik</a>
+							<a href="#" class="unselected" id="kriteria-nonfisik" onclick="showForm('kriteria-nonfisik')">Kriteria Non Fisik</a>
 						</div>
 					</div>
-					<div class="form-bio">
+					
+					<div class="form-bio" id="profil-form">
 						<h1>Biodata</h1>
 						<div class="field-bio">
 							<div class="foto">
 								<p>Foto</p>
-								<input type="file" class="foto-input" accept=".pdf, .png, .jpg, .jpeg" />
+								<div class="profile-foto">
+									<div class="pilihfoto">
+										<img src="/assets/images/defaultpic.png" id="profilepic">
+										<div>
+										<label for="input-foto">Upload image</label>
+										<input type="file" accept="image/jpeg, image/png, image/jpg" id="input-foto"></div>
+									</div>
+								</div>
 							</div>
 							<div class="username">
 								<p>Username</p>
@@ -41,15 +49,15 @@
 									class="namalengkap-input"
 									placeholder="Masukkan nama lengkap" />
 							</div>
-							<div class="namalengkap">
+							<div class="nomortelepon">
 								<p>Nomor Telepon</p>
-								<input type="username" class="namalengkap-input" placeholder="Nama lengkap" />
+								<input type="username" class="namalengkap-input" placeholder="Masukkan nomor telepon" />
 							</div>
-							<div class="namalengkap">
+							<div class="tempatlahir">
 								<p>Tempat Lahir</p>
-								<input type="username" class="namalengkap-input" placeholder="Nama lengkap" />
+								<input type="username" class="namalengkap-input" placeholder="Masukkan tempat lahir" />
 							</div>
-							<div class="namalengkap">
+							<div class="tanggallahir">
 								<p>Tanggal Lahir</p>
 								<input type="date" class="namalengkap-input" placeholder="Nama lengkap" />
 							</div>
@@ -72,13 +80,85 @@
 									</div>
 								</div>
 							</div>
-							<div class="namalengkap">
+							<div class="status">
 								<p>Status</p>
-								<input type="username" class="namalengkap-input" placeholder="Nama lengkap" />
+								<select class="pilihanstatus">
+									<option value="-" disabled selected>--- Pilih Status Anda ---</option>
+  									<option value="Belum menikah">Belum Menikah</option>
+  									<option value="Janda">Cerai</option>
+								</select>
 							</div>
 							<div class="namalengkap">
 								<p>Suku</p>
-								<input type="username" class="namalengkap-input" placeholder="Nama lengkap" />
+								<input type="username" class="namalengkap-input" placeholder="Masukkan suku anda" />
+							</div>
+						</div>
+						<button class="simpan-btn">Simpan</button>
+					</div>
+
+					<div class="form-bio" id="gambaran-fisik-form" style="display: none;">
+						<h1>gambaran-fisik</h1>
+						<div class="field-bio">
+							<div class="foto">
+								<p>Foto</p>
+								<div class="profile-foto">
+									<div class="pilihfoto">
+										<img src="/assets/images/defaultpic.png" id="profilepic">
+										<div>
+										<label for="input-foto">Upload image</label>
+										<input type="file" accept="image/jpeg, image/png, image/jpg" id="input-foto"></div>
+									</div>
+								</div>
+							</div>
+							<div class="username">
+								<p>Username</p>
+								<input
+									type="username"
+									class="namalengkap-input"
+									placeholder="Masukkan nama lengkap" />
+							</div>
+							<div class="nomortelepon">
+								<p>Nomor Telepon</p>
+								<input type="username" class="namalengkap-input" placeholder="Masukkan nomor telepon" />
+							</div>
+							<div class="tempatlahir">
+								<p>Tempat Lahir</p>
+								<input type="username" class="namalengkap-input" placeholder="Masukkan tempat lahir" />
+							</div>
+							<div class="tanggallahir">
+								<p>Tanggal Lahir</p>
+								<input type="date" class="namalengkap-input" placeholder="Nama lengkap" />
+							</div>
+							<div class="jeniskelamin">
+								<p>Jenis Kelamin</p>
+								<div class="pilihanjeniskelamin">
+									<div class="pilihan-radio">
+										<input type="radio" id="laki-laki" name="jenis_kelamin" value="Laki-laki" />
+										<div class="icon-radio">
+											<ion-icon name="man"></ion-icon>
+											<label for="laki-laki">Laki-laki</label>
+										</div>
+									</div>
+									<div class="pilihan-radio">
+										<input type="radio" id="perempuan" name="jenis_kelamin" value="Perempuan" />
+										<div class="icon-radio">
+											<ion-icon name="woman"></ion-icon>
+											<label for="perempuan">Perempuan</label>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="status">
+								<p>Status</p>
+								<select class="pilihanstatus">
+									<option value="-" disabled selected>--- Pilih Status Anda ---</option>
+  									<option value="Belum menikah">Belum Menikah</option>
+  									<option value="Janda">Cerai</option>
+								</select>
+							</div>
+							<div class="namalengkap">
+								<p>Suku</p>
+								<input type="username" class="namalengkap-input" placeholder="Masukkan suku anda" />
 							</div>
 						</div>
 						<button class="simpan-btn">Simpan</button>
@@ -91,5 +171,25 @@
 			type="module"
 			src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 		<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+	
+		<script>
+			let profilepic = document.querySelector('#profilepic');
+			let inputFoto = document.querySelector('#input-foto');
+
+			inputFoto.onchange = function(){
+				profilepic.src = URL.createObjectURL(inputFoto.files[0]);
+			}
+
+			function showForm(formId) {
+				// Hide all forms first
+				var forms = document.getElementsByClassName('form-bio');
+				for (var i = 0; i < forms.length; i++) {
+					forms[i].style.display = 'none';
+				}
+
+				// Show the selected form
+				document.getElementById(formId + '-form').style.display = 'block';
+			}
+		</script>
 	</body>
 </html>
