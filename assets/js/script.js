@@ -4,7 +4,7 @@ function selectedNavbar() {
 	console.log("fileName:", typeof fileName);
 	const artikelNav = document.querySelector("#artikel-navbar");
 	const pelatihanNav = document.querySelector("#pelatihan-navbar");
-	const konsultasiNav = document.querySelector("#konsultasi-navbar");
+	const chatNav = document.querySelector("#chat-navbar");
 	const berandaNav = document.querySelector("#beranda-navbar");
 	console.log("berandaNav:", berandaNav);
 	if (fileName === "artikel.html") {
@@ -13,8 +13,8 @@ function selectedNavbar() {
 		header.style.backgroundColor = "#FFF4F6";
 	} else if (fileName === "pelatihan.html") {
 		pelatihanNav.classList.add("selected");
-	} else if (fileName === "konsultasi.html") {
-		konsultasiNav.classList.add("selected");
+	} else if (fileName === "chat.html") {
+		chatNav.classList.add("selected");
 	} else if (fileName === "dashboard.html") {
 		berandaNav.classList.add("selected");
 	} else {
