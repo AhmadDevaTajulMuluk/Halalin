@@ -7,6 +7,17 @@
 		<title>Dashboard</title>
 	</head>
 	<body>
+		<div id="next-page-container" onclick="closeTabNavigator('next-page-container')">
+			<div id="next-page">
+				<p>Buat akun untuk melanjutkan</p>
+				<a href="../views/pages/register.html" class="button">Register</a>
+				<p>
+					Sudah punya akun?
+					<a href="../views/pages/login.html" class="login">Login</a>
+				</p>
+			</div>
+		</div>
+
 		<header class="header-effect">
 			<div id="header-container">
 				<div id="logo-container">
@@ -22,9 +33,11 @@
 					<div class="navbar-items">
 						<nav>
 							<a id="beranda-navbar" class="selected" href="../pages/dashboard.html">Beranda</a>
-							<a id="artikel-navbar" href="#">Artikel</a>
-							<a id="pelatihan-navbar" href="#">Pelatihan</a>
-							<a id="chat-navbar" href="#">Chat</a>
+							<a id="artikel-navbar" onclick="navigateToRegister('next-page-container')">Artikel</a>
+							<a id="pelatihan-navbar" onclick="navigateToRegister('next-page-container')">
+								Pelatihan
+							</a>
+							<a id="chat-navbar" onclick="navigateToRegister('next-page-container')">Chat</a>
 						</nav>
 						<a href="./pages/login.html" class="button masuk-button">Masuk</a>
 					</div>
@@ -105,22 +118,24 @@
 						<img src="../assets/images/user.png" alt="group" />
 						<div class="testimonial">
 							<p class="testimonial-author">Dadang Injeksi</p>
-							<p class="testimonial-content">"Alhamdulillah berkat website ini saya mendapat pasangan hidup yang cocok"</p>
-						  </div>
+							<p class="testimonial-content">
+								"Alhamdulillah berkat website ini saya mendapat pasangan hidup yang cocok"
+							</p>
+						</div>
 					</div>
 					<div class="item-box">
 						<img src="../assets/images/user.png" alt="group" />
 						<div class="testimonial">
 							<p class="testimonial-author">Toha Mukena</p>
 							<p class="testimonial-content">"Website pencari jodoh halal terbaik !"</p>
-						  </div>
+						</div>
 					</div>
 					<div class="item-box">
 						<img src="../assets/images/user.png" alt="group" />
 						<div class="testimonial">
 							<p class="testimonial-author">Sutoyo Kabel</p>
 							<p class="testimonial-content">"Panjang umur kebaikan, ilmu padi capt"</p>
-						  </div>
+						</div>
 					</div>
 				</div>
 			</article>

@@ -51,6 +51,38 @@ body {
 	height: fit-content;
 	align-self: center;
 }
+
+/* landingpage */
+#next-page-container {
+	display: none;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 100vh;
+	background-color: rgba(0, 0, 0, 0.5);
+	position: fixed;
+	z-index: 9998;
+	transition: 2s;
+}
+#next-page-container.show {
+	transition: 2s;
+	display: flex;
+}
+#next-page {
+	transition: 2s;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	position: fixed;
+	background-color: #ffffff;
+	padding: 20px;
+	border-radius: 20px;
+}
+#next-page .login {
+	color: #4b5c98;
+	font-weight: 700;
+}
+
 header {
 	display: flex;
 	justify-content: center;

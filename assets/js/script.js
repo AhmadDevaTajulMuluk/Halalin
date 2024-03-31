@@ -61,6 +61,16 @@ function openSidebar(id, leftLength) {
 	}
 }
 
+function navigateToRegister(id) {
+	const tabNavigator = document.getElementById(id);
+	tabNavigator.classList.add("show");
+}
+
+function closeTabNavigator(id) {
+	const tabNavigator = document.getElementById(id);
+	tabNavigator.classList.remove("show");
+}
+
 function babDropdown(id, dropdownId) {
 	const dropdown = document.getElementById(id);
 	const dropdownLogo = document.getElementById(dropdownId);
