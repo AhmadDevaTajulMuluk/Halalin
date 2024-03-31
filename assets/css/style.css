@@ -1291,7 +1291,7 @@ button:hover {
   text-align: center;
 }
 
-.pilihfoto img {
+#profilepic {
   align-items: center;
   flex-wrap: wrap;
   width: 180px;
