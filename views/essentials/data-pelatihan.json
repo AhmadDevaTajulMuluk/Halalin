@@ -1,0 +1,18 @@
+{
+	"materi": {
+		"bab1": [
+			{
+				"sub_bab": "1",
+				"file_html": "subbab1.html",
+				"status": "Belum Selesai",
+				"judul": "Sub Bab 1"
+			},
+			{
+				"sub_bab": "2",
+				"file_html": "subbab2-kuis.html",
+				"status": "Belum Selesai",
+				"judul": "Sub Bab 2"
+			}
+		]
+	}
+}
