@@ -264,12 +264,12 @@ nav a.selected {
 	display: inline-flex;
 	justify-content: center;
 	align-items: center;
-	gap: 1rem;
+	gap: 1.5rem;
 	flex-wrap: wrap;
-}
-.item-box {
-	width: 342.382px;
-	height: 400px;
+  }
+  .item-box {
+	width: 340px;
+	height: 350px;
 	border-radius: 15px;
 	background: linear-gradient(97deg, #e3e3e3 2.97%, #eddeb7 120.26%);
 	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -282,57 +282,102 @@ nav a.selected {
 	padding: 30px;
 	transition: transform 0.3s ease;
 	cursor: pointer;
-}
-
-.item-box:hover {
+  }
+  
+  .item-box:hover {
 	transform: scale(1.05);
-}
-
-.item-box img {
+  }
+  
+  #testimoni img {
 	align-self: center;
 	width: 80px;
 	height: 80px;
 	border-radius: 50px;
-}
-
-.testimonial {
+  }
+  
+  article img {
+	border-radius: 15px 15px 0 0;
+	width: 340px;
+	height: 165px;
+	object-fit: cover;
+	top: 10%;
+	margin-bottom: 15px;
+	opacity: 0.85;
+  }
+  .article-text {
+	display: -webkit-box;
+	-webkit-line-clamp: 5;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	margin-inline: 20px;
+	margin-bottom: 25px;
+  
+	h3 {
+	  font-size: 18px;
+	  margin: 0;
+	  color: #052958;
+	}
+	p {
+	  font-size: 16px;
+	  font-weight: 400;
+	  color: #052958;
+	}
+  }
+  
+  .testimonial {
 	text-align: center;
 	font-size: 1.2rem;
 	margin-top: 20px;
-	border-top: 1px solid #ccc;
+	border-top: 1px solid #a8a8a8;
 	color: #052958;
-}
-
-.testimonial-content {
+  }
+  
+  .testimonial-content {
 	margin-top: 20px;
 	font-weight: 300;
-}
-.item-box-layanan {
+	font-size: 16px;
+  }
+  .item-box-layanan {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: space-between;
-	width: 252.382px;
-	height: 233px;
+	width: 230px;
+	height: 200px;
 	font-size: 15px;
 	border-radius: 15px;
 	background: linear-gradient(97deg, #e3e3e3 2.97%, #eddeb7 120.26%);
-}
-.layanan-text {
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  
+	transition: transform 0.3s ease;
+	cursor: pointer;
+  }
+  .item-box-layanan:hover {
+	transform: scale(1.05);
+  }
+  .layanan-text {
 	width: 80%;
 	font-weight: 800;
 	font-size: 15px;
 	font-weight: 500;
 	color: black;
-}
-.layanan-text h3 {
-	font-weight: 800;
+	p {
+	  font-weight: 300;
+	}
+  }
+  .layanan-text h3 {
+	font-weight: 700;
 	font-size: 18px;
 	color: #052958;
-}
-.layanan-text hr {
-	width: 60%;
-}
+  }
+  .layanan-text hr {
+	width: 80%;
+	border-color: #a8a8a8;
+	opacity: 0.2;
+	border-width: 0.2px;
+  }
+  
 
 .login-container {
 	display: flex;
