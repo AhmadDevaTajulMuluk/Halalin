@@ -1524,6 +1524,13 @@ font-size: 1.2rem;
   text-align: left;
 }
 
+.divbutton{
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  text-align: center;
+}
+
 .simpan-btn {
   display: flex;
   justify-content: center;
