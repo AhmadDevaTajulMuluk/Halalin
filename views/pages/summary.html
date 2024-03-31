@@ -5,13 +5,15 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="stylesheet" href="../../assets/css/style.css" />
 		<link rel="stylesheet" href="pelatihan.css" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
 		<title>Pelatihan</title>
 	</head>
 	<body>
 		<header id="header-soal">
 			<div id="header-container">
-				<h1 style="padding: 0; margin: 0">Hasil Pelatihan </h1>
+				<h1 style="padding: 0; margin: 0">Hasil Pelatihan</h1>
 			</div>
 		</header>
 		<main id="page-hasil">
@@ -22,37 +24,38 @@
 							<h1>SKOR</h1>
 						</div>
 						<div class="nilai">
-                            <h1>90</h1>
+							<h1>90</h1>
 						</div>
-                        <div class="summary">
+						<div class="summary">
 							<div class="summary-true">
 								<p>Benar</p>
-								<p class="answer-true">2</p> 
+								<p class="answer-true">2</p>
 							</div>
 							<div class="summary-false">
 								<p>Salah</p>
-								<p class="answer-true">1</p> 
-							</div> 
+								<p class="answer-true">1</p>
+							</div>
 						</div>
 						<div class="keterangan">
 							<p>Skor anda memenuhi kriteria, silahkan lanjutkan pelatihan ke bab selanjutnya</p>
 						</div>
 					</aside>
-					<div id="open-soal" onclick="openSoal()">
+					<div id="open-soal" onclick="openSidebar('side-soal-container', '-260px')">
 						<img src="../../assets/images/dropdown.png" alt="" width="10px" />
 					</div>
 				</div>
 				<div class="wrapper-soal">
 					<div class="soal" id="soal">
 						<div id="soal-container">
-                            <div class="benar">
-                                <h1> <i class="fa-solid fa-check"></i>Benar</h1>
-                            </div>
-                            
+							<div class="benar">
+								<h1>
+									<i class="fa-solid fa-check"></i>
+									Benar
+								</h1>
+							</div>
+
 							<h1 id="judul-soal">Soal 1</h1>
-							<p id="isi-soal" style="font-size: 18px" >
-								Lorem ipsum dolor sit amet, 
-							</p>
+							<p id="isi-soal" style="font-size: 18px">Lorem ipsum dolor sit amet,</p>
 						</div>
 						<div class="choice-container">
 							<div class="choice">
@@ -60,7 +63,12 @@
 								<p class="answer-text" onclick="selectChoice(this)">Pilihan A</p>
 							</div>
 							<div class="choice">
-								<p class="answer-prefix" style="background-color: #4b5c98; color: #fff ;" onclick="selectChoice(this)">B</p>
+								<p
+									class="answer-prefix"
+									style="background-color: #4b5c98; color: #fff"
+									onclick="selectChoice(this)">
+									B
+								</p>
 								<p class="answer-text" onclick="selectChoice(this)">Pilihan B</p>
 							</div>
 							<div class="choice">
@@ -73,16 +81,17 @@
 							</div>
 						</div>
 					</div>
-                    <div class="soal" id="soal">
+					<div class="soal" id="soal">
 						<div id="soal-container">
-                            <div class="salah">
-                                <h1> <i class="fa-solid fa-xmark"></i>Salah</h1>
-                            </div>
-                            
+							<div class="salah">
+								<h1>
+									<i class="fa-solid fa-xmark"></i>
+									Salah
+								</h1>
+							</div>
+
 							<h1 id="judul-soal">Soal 2</h1>
-							<p id="isi-soal" style="font-size: 18px" >
-								Lorem ipsum dolor sit amet, 
-							</p>
+							<p id="isi-soal" style="font-size: 18px">Lorem ipsum dolor sit amet,</p>
 						</div>
 						<div class="choice-container">
 							<div class="choice">
@@ -90,7 +99,12 @@
 								<p class="answer-text" onclick="selectChoice(this)">Pilihan A</p>
 							</div>
 							<div class="choice">
-								<p class="answer-prefix" style="background-color: #4b5c98; color: #fff ;" onclick="selectChoice(this)">B</p>
+								<p
+									class="answer-prefix"
+									style="background-color: #4b5c98; color: #fff"
+									onclick="selectChoice(this)">
+									B
+								</p>
 								<p class="answer-text" onclick="selectChoice(this)">Pilihan B</p>
 							</div>
 							<div class="choice">

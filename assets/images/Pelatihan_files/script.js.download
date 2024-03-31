@@ -51,28 +51,14 @@ function toggleDropdown() {
 	}
 }
 
-function openSidebar(id, leftLength) {
+function openSidebar(id) {
 	const dropdown = document.getElementById(id);
+	console.log("dropdown:", dropdown);
 
-	if (dropdown.style.left === "0px") {
-		dropdown.style.left = leftLength;
+	if (dropdown.style.left === "0%") {
+		dropdown.style.left = "-34%";
 	} else {
-		dropdown.style.left = "0px";
-	}
-}
-
-function babDropdown(id, dropdownId) {
-	const dropdown = document.getElementById(id);
-	const dropdownLogo = document.getElementById(dropdownId);
-	if (dropdown.style.display === "none") {
-		dropdown.style.display = "block";
-		dropdown.style.animation = "fadeInDown 1s";
-		dropdownLogo.classList.add("fa-chevron-down");
-		dropdownLogo.classList.remove("fa-chevron-right");
-	} else {
-		dropdown.style.display = "none";
-		dropdownLogo.classList.remove("fa-chevron-down");
-		dropdownLogo.classList.add("fa-chevron-right");
+		dropdown.style.left = "0%";
 	}
 }
 

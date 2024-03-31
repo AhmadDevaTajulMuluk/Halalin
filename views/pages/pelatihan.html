@@ -13,30 +13,38 @@
 	<body id="pelatihan">
 		<header id="navbar" class="header-effect"></header>
 		<main id="main-pelatihan">
-			<aside id="sidebar-pelatihan">
-				<div>
-					<h2>Daftar Pelatihan</h2>
-				</div>
-				<div class="percentage">
-					<div class="percentage-container">
-						<hr class="percentage-line-second" />
-						<hr class="percentage-line-first" />
+			<div id="page-pelatihan"></div>
+			<div id="sidebar-pelatihan-container">
+				<aside id="sidebar-pelatihan">
+					<div>
+						<h2>Daftar Pelatihan</h2>
 					</div>
-					<p class="percentage-text">0% selesai</p>
-				</div>
-				<div id="list-bab">
-					<div class="bab-container">
-						<div class="bab-dropdown">
-							<div class="fa fa-chevron-down"></div>
-							<h2>Bab 1</h2>
+					<div class="percentage">
+						<div class="percentage-container">
+							<hr class="percentage-line-second" />
+							<hr class="percentage-line-first" />
 						</div>
-						<ul>
-							<li id="sub-bab-1" onclick="goToPage(0)">Sub bab 1</li>
-							<li id="sub-bab-2" onclick="goToPage(1)">Sub bab 2</li>
-						</ul>
+						<p class="percentage-text">0% selesai</p>
 					</div>
+					<div id="list-bab">
+						<div class="bab-container">
+							<div class="bab-dropdown" onclick="babDropdown('bab-1', 'dropdown-bab-1')">
+								<div id="dropdown-bab-1" class="fa fa-chevron-down"></div>
+								<h2>Bab 1</h2>
+							</div>
+							<ul id="bab-1" class="sub-bab-container">
+								<li id="sub-bab-1" onclick="goToPage(0)">Sub bab 1</li>
+								<li id="sub-bab-2" onclick="goToPage(1)">Sub bab 2</li>
+							</ul>
+						</div>
+				</aside>
+				<div
+					id="open-bab"
+					onclick="openSidebar('sidebar-pelatihan-container', '-245px')"
+					style="color: #4b5c98">
+					<i class="fa fa-bars" aria-hidden="true"></i>
 				</div>
-			</aside>
+			</div>
 			<div id="content-pelatihan"></div>
 		</main>
 		<footer id="pelatihan-footer">
