@@ -869,6 +869,56 @@ button:hover {
   font-size: 16px;
 }
 
+.nilai{
+  font-size: 2rem;
+background-color: #4B5C98;
+color: #4b4b4b;
+border-radius: 50px;
+color: #fff;
+}
+
+.nilai h1{
+margin: 0;
+}
+
+.skor h1{
+  font-size: 1.5rem;
+  background-color: #fff;
+  color: #4b4b4b;
+}
+
+.summary {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+margin: 0;
+  color: #4b4b4b;
+  font-size: 1.8rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+.summary-true {
+  margin-right: 45px; 
+}
+
+.summary p {
+margin-bottom: 0;
+  color: #4b4b4b;
+}
+
+.answer-true {
+margin: 20px 0 15px 0;
+  margin-top: 5px;
+}
+
+.keterangan p{
+margin-top: 20px;
+text-align: left;
+font-size: 1.2rem;
+}
+
 #side-soal-container {
   display: flex;
   flex: 0 0 260px;
