@@ -32,7 +32,14 @@
 						<div class="field-bio">
 							<div class="foto">
 								<p>Foto</p>
-								<input type="file" class="foto-input" accept=".pdf, .png, .jpg, .jpeg" />
+								<div class="profile-foto">
+									<div class="pilihfoto">
+										<img src="/assets/images/defaultpic.png" id="profilepic">
+										<div>
+										<label for="input-foto">Upload image</label>
+										<input type="file" accept="image/jpeg, image/png, image/jpg" id="input-foto"></div>
+									</div>
+								</div>
 							</div>
 							<div class="username">
 								<p>Username</p>
@@ -41,15 +48,15 @@
 									class="namalengkap-input"
 									placeholder="Masukkan nama lengkap" />
 							</div>
-							<div class="namalengkap">
+							<div class="nomortelepon">
 								<p>Nomor Telepon</p>
-								<input type="username" class="namalengkap-input" placeholder="Nama lengkap" />
+								<input type="username" class="namalengkap-input" placeholder="Masukkan nomor telepon" />
 							</div>
-							<div class="namalengkap">
+							<div class="tempatlahir">
 								<p>Tempat Lahir</p>
-								<input type="username" class="namalengkap-input" placeholder="Nama lengkap" />
+								<input type="username" class="namalengkap-input" placeholder="Masukkan tempat lahir" />
 							</div>
-							<div class="namalengkap">
+							<div class="tanggallahir">
 								<p>Tanggal Lahir</p>
 								<input type="date" class="namalengkap-input" placeholder="Nama lengkap" />
 							</div>
@@ -72,13 +79,18 @@
 									</div>
 								</div>
 							</div>
-							<div class="namalengkap">
+							<div class="status">
 								<p>Status</p>
-								<input type="username" class="namalengkap-input" placeholder="Nama lengkap" />
+								<select class="pilihanstatus">
+									<option value="-" disabled selected>--- Pilih Status Anda ---</option>
+  									<option value="Single">Single</option>
+  									<option value="Janda">Janda</option>
+  									<option value="Duda">Duda</option>
+								</select>
 							</div>
 							<div class="namalengkap">
 								<p>Suku</p>
-								<input type="username" class="namalengkap-input" placeholder="Nama lengkap" />
+								<input type="username" class="namalengkap-input" placeholder="Masukkan suku anda" />
 							</div>
 						</div>
 						<button class="simpan-btn">Simpan</button>
@@ -91,5 +103,14 @@
 			type="module"
 			src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 		<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+	
+		<script>
+			let profilepic = document.querySelector('#profilepic');
+			let inputFoto = document.querySelector('#input-foto');
+
+			inputFoto.onchange = function(){
+				profilepic.src = URL.createObjectURL(inputFoto.files[0]);
+			}
+		</script>
 	</body>
 </html>
