@@ -1386,3 +1386,123 @@ button:hover {
 	transition: all 0.5s;
 }
 /*BIODATA*/
+
+/* Seacrh */
+.not-found {
+	background-color: #f44336; /* Warna merah */
+	color: white;
+	padding: 10px;
+	border-radius: 5px;
+	text-align: center;
+	margin-bottom: 10px;
+	display: none; /* Mulai tersembunyi */
+  }
+  
+  .container-search {
+	max-width: 800px;
+	margin: 0 auto;
+	padding: 20px;
+	background-color: #fff;
+	border-radius: 10px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  #h1-search {
+	font-size: 28px;
+	margin-bottom: 20px;
+	text-align: center;
+	color: #333;
+  }
+  
+  label {
+	display: block;
+	margin-bottom: 5px;
+	color: #555;
+  }
+  
+  select,
+  input[type="text"] {
+	width: 100%;
+	padding: 10px;
+	margin-bottom: 15px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+  }
+  
+  #button-search {
+	display: block;
+	width: 100%;
+	padding: 10px;
+	background-color: #4caf50;
+	border: none;
+	border-radius: 5px;
+	color: #fff;
+	font-size: 16px;
+	cursor: pointer;
+  }
+  
+  #button-search:hover {
+	background-color: #45a049;
+  }
+  
+  .search {
+	display: none;
+  }
+  
+  .container-result {
+	margin-top: 20px;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+	grid-gap: 20px;
+  }
+  
+  .card-container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+  }
+  
+  .card {
+	flex: 0 0 350px; /* Lebar dinamis untuk tiga card dalam satu baris */
+	margin: 10px;
+	background-color: #f9f9f9;
+	border-radius: 5px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  @media (max-width: 600px) {
+	.card {
+	  flex: 0 0 calc(50% - 20px); /* Dua card dalam satu baris */
+	}
+  }
+  
+  @media (max-width: 400px) {
+	.card {
+	  flex: 0 0 calc(100% - 20px); /* Satu card dalam satu baris */
+	}
+  }
+  
+  .card-header {
+	padding: 10px;
+	background-color: #f0f0f0;
+	border-radius: 5px 5px 0 0;
+  }
+  
+  .card-header h2 {
+	margin: 0;
+	font-size: 20px;
+  }
+  
+  .card-body {
+	padding: 20px;
+  }
+  
+  .card-body p {
+	margin: 5px 0;
+  }
+  
+  .card-body p strong {
+	font-weight: bold;
+  }
+
+/* Seacrh */

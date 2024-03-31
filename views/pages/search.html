@@ -10,7 +10,7 @@
     <header id="navbar" class="header-effect"></header>
     <main>
         <div class="container-search">
-            <h1>Mencari Kriteria Pasangan</h1>
+            <h1 id="h1-search">Mencari Kriteria Pasangan</h1>
             <label for="searchType">Pilih Tipe Pencasian:</label>
             <select id="searchType">
               <option value="physical">Fisik</option>
@@ -66,7 +66,7 @@
               <input type="text" id="ethnicity" />
             </div>
       
-            <button onclick="search()">Search</button>
+            <button id="button-search" onclick="search()">Search</button>
           </div>
           <div id="notFound" class="not-found">Data Tidak Ditemukan</div>
           <div class="container-result">
