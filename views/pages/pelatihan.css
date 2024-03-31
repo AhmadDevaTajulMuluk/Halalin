@@ -79,6 +79,7 @@ aside#sidebar-pelatihan {
 	justify-content: flex-start;
 	align-items: center;
 	gap: 1.5rem;
+	cursor: pointer;
 }
 .bab-dropdown h2 {
 	margin: 0;
