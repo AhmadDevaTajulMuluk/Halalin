@@ -1852,3 +1852,173 @@ input[type="text"] {
 	margin: -1px;
 	border-radius: 10px;
 }
+
+/* Pelatihan */
+body#pelatihan {
+	max-height: calc(100% - 138px);
+}
+main#main-pelatihan {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	width: 100%;
+	background-color: white;
+}
+.hide-item {
+	opacity: 0;
+	display: none;
+}
+#sidebar-pelatihan-container {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	width: 20%;
+	min-height: 500px;
+	padding: 10px 30px;
+	background-color: white;
+	border: 1px solid #d6d6d6;
+}
+aside#sidebar-pelatihan {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+}
+.percentage {
+	display: flex;
+	flex-direction: column;
+	margin: 0;
+}
+.percentage-container {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: center;
+	gap: 0;
+}
+.percentage-line-first {
+	width: 100%;
+	height: 10px;
+	background-color: white;
+	border-radius: 0 5px 5px 0;
+	position: relative;
+}
+.percentage-line-second {
+	width: 100%;
+	height: 10px;
+	background-color: #4b5c98;
+	border-radius: 5px 0 0 5px;
+	display: block;
+}
+.percentage-line::after {
+	width: 0%;
+	content: "";
+	height: 5px;
+	background-color: #4b5c98;
+	display: block;
+	border-radius: 5px;
+}
+.percentage-text {
+	font-size: 13px;
+	text-align: right;
+	margin: 0;
+}
+#list-bab {
+	display: flex;
+	flex-direction: column;
+}
+.bab-choice {
+	cursor: pointer;
+}
+.bab-dropdown {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: center;
+	gap: 1.5rem;
+	cursor: pointer;
+}
+.bab-dropdown h2 {
+	margin: 0;
+}
+.bab-container li {
+	list-style-image: url("../../assets/images/list-undone.svg");
+	margin: 8px;
+	margin-left: 10px;
+	cursor: pointer;
+}
+.bab-container li.list-done {
+	list-style-image: url("../../assets/images/list-done.svg");
+}
+.sub-bab-container li {
+	transition: 2s;
+}
+#content-pelatihan {
+	display: flex;
+	flex-direction: column;
+	width: 80%;
+	height: 100%;
+	min-height: 500px;
+	padding: 10px 30px;
+	padding-top: 17px;
+	background-color: white;
+	border: 1px solid #d6d6d6;
+	gap: 1rem;
+	text-align: justify;
+}
+#content-pelatihan h1 {
+	margin: 3px;
+}
+#content-pelatihan p {
+	margin: 3px;
+}
+#content-pelatihan img {
+	width: 100%;
+	height: 80%;
+	border-radius: 10px;
+	margin: 10px auto;
+}
+footer#pelatihan-footer {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin: 0 20px;
+}
+.fledir-row {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	gap: 0.8rem;
+}
+#open-bab {
+	display: none;
+	align-self: center;
+	padding: 20px 10px;
+	background-color: #ffffff;
+	margin-left: 210px;
+	border-radius: 0 50px 50px 0;
+	cursor: pointer;
+}
+@media screen and (max-width: 768px) {
+	#sidebar-pelatihan-container {
+		flex: 0 0 100%;
+		position: fixed;
+		width: 250px;
+		top: 0;
+		left: -245px;
+		z-index: 9999;
+		transition: 0.5s;
+		padding: 10px 30px;
+		padding-right: 10px;
+	}
+	#sidebar-pelatihan {
+		width: 100%;
+		height: 100vh;
+		overflow: scroll;
+		overflow-x: hidden;
+		padding-right: 10px;
+	}
+	#open-bab {
+		display: flex;
+		position: absolute;
+	}
+}
