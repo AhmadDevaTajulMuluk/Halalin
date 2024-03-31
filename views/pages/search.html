@@ -6,12 +6,12 @@
     <title>Mencari Pasangan</title>
     <link rel="stylesheet" href="../../assets/css/style.css">
 </head>
-<body>
+<body id="page-search">
     <header id="navbar" class="header-effect"></header>
     <main>
         <div class="container-search">
             <h1 id="h1-search">Mencari Kriteria Pasangan</h1>
-            <label for="searchType">Pilih Tipe Pencasian:</label>
+            <label for="searchType">Pilih Tipe Pencarian:</label>
             <select id="searchType">
               <option value="physical">Fisik</option>
               <option value="nonPhysical">Non-Fisik</option>
@@ -52,8 +52,16 @@
               <h2>Kriteria Non-Fisik</h2>
               <label for="age">Umur:</label>
               <input type="text" id="age" />
+              <label for="quran">Hafalan:</label>
+              <input type="text" id="quran" />
               <label for="Education">Pendidikan:</label>
-              <input type="text" id="education" />
+                  <select id="education">
+                    <option value="">-- Pilih Pendidikan Terakhir --</option>
+                    <option value="Sarjana">Sarjana</option>
+                    <option value="Sekolah Menengah Atas">Sekolah Menengah Atas</option>
+                    <option value="Sekolah Menengah Pertama">Sekolah Menengah Pertama</option>
+                    <option value="Sekolah Dasar">Sekolah Dasar</option>
+                  </select>
               <label for="location">Domisili:</label>
               <input type="text" id="location" />
               <label for="occupation">Pekerjaan:</label>
@@ -72,6 +80,7 @@
           <div class="container-result">
             <div id="results" class="card-container"></div>
           </div>
+          <div id="popupBackdrop" class="popup-backdrop"></div>
     </main>
     <section id="footer"></section>
     <script type="text/javascript" src="../../assets/js/search.js"></script>

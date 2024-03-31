@@ -981,6 +981,7 @@ button:hover {
   float: right;
   margin-left: auto;
   margin-right: 20px;
+  margin-top: 25px;
   padding: 10px 20px;
   background-color: #4b5c98;
   color: #fff;
@@ -993,6 +994,7 @@ button:hover {
 .prev-button {
   margin-left: auto;
   margin-right: 20px;
+  margin-top: 25px;
   padding: 10px 20px;
   background-color: #4b5c98;
   color: #fff;
@@ -1690,6 +1692,9 @@ button:hover {
 /*BIODATA*/
 
 /* Seacrh */
+#page-search {
+  background: linear-gradient(97deg, #e3e3e3 2.97%, #eddeb7 120.26%);
+}
 .not-found {
   background-color: #f44336; /* Warna merah */
   color: white;
@@ -1702,7 +1707,7 @@ button:hover {
 
 .container-search {
   max-width: 800px;
-  margin: 0 auto;
+  margin: 20px auto 0;
   padding: 20px;
   background-color: #fff;
   border-radius: 10px;
@@ -1735,7 +1740,7 @@ input[type="text"] {
   display: block;
   width: 100%;
   padding: 10px;
-  background-color: #4caf50;
+  background-color: #4b5c98;
   border: none;
   border-radius: 5px;
   color: #fff;
@@ -1744,7 +1749,7 @@ input[type="text"] {
 }
 
 #button-search:hover {
-  background-color: #45a049;
+  background-color: #4b5c98;
 }
 
 .search {
@@ -1768,8 +1773,8 @@ input[type="text"] {
   flex: 0 0 350px; /* Lebar dinamis untuk tiga card dalam satu baris */
   margin: 10px;
   background-color: #f9f9f9;
-  border-radius: 5px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
 }
 
 @media (max-width: 600px) {
@@ -1786,7 +1791,8 @@ input[type="text"] {
 
 .card-header {
   padding: 10px;
-  background-color: #f0f0f0;
+  text-align: center;
+  background-color: #dcd6d7;
   border-radius: 5px 5px 0 0;
 }
 
@@ -1808,6 +1814,88 @@ input[type="text"] {
 }
 
 /* Seacrh */
+
+/* Style untuk pop-up */
+.popup-backdrop {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Latar belakang transparan */
+  z-index: 999; /* Membuat popup berada di atas konten lain */
+}
+
+.popup-search {
+  position: fixed;
+  text-align: center;
+  width: 40%; /* Ukuran popup untuk layar besar */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  line-height: 0.8;
+}
+
+.popup-search h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.popup-search p {
+  margin-bottom: 5px;
+}
+
+.popup-search button {
+  display: block;
+  margin-top: 10px;
+  padding: 8px 15px;
+  background-color: #ff5142;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.popup-search button:hover {
+  background-color: #a04545;
+}
+
+.popup-search .cv-button {
+  position: absolute;
+  bottom: 20px;
+  padding: 8px 15px;
+  right: calc(10px + 10px); /* Sesuaikan dengan jarak dari bagian kanan popup */
+  padding: 8px 15px;
+  background-color: #4b5c98; /* Warna biru yang konsisten dengan gaya tombol */
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 16px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.popup-search .cv-button:hover {
+  background-color: #252e50;
+}
+
+@media screen and (max-width: 768px) {
+  .popup-search {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .popup-search {
+    width: 90%;
+  }
+}
 
 /* CHAT */
 #page-chat {
