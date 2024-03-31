@@ -1220,7 +1220,7 @@ button:hover {
   flex-direction: column;
   align-items: center;
   width: 80%;
-  height: 1300px;
+  height: auto;
   padding: 30px;
   border-radius: 20px;
   margin-left: 30px;
@@ -1249,7 +1249,7 @@ button:hover {
 .field-bio * {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center;
   color: #4b5c98;
   font-weight: 600;
   text-align: left;
@@ -1456,6 +1456,7 @@ button:hover {
 .simpan-btn {
   display: flex;
   justify-content: center;
+  text-align: center;
   margin-top: 15px;
   padding: 10px;
   outline: none;

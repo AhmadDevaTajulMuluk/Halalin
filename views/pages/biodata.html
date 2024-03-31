@@ -147,13 +147,6 @@
 									class="beratbadan-input"
 									placeholder="Masukkan berat badan anda" />
 							</div>
-							<div class="hobi">
-								<p>Hobi Kesukaan</p>
-								<input
-									type="username"
-									class="hobi-input"
-									placeholder="Masukkan hobi anda" />
-							</div>
 							<div class="riwayatpenyakit">
 								<p>Apakah anda memiliki riwayat penyakit?</p>
 								<div class="wrapperpilihanpenyakit">
@@ -166,6 +159,53 @@
 										<label for="Tidak">Tidak, saya tidak memiliki riwayat penyakit</label>
 									</div>
 								</div>
+							</div>
+							<div class="hobi">
+								<p>Jelaskan riwayat penyakit (jika ada)</p>
+								<input
+									type="username"
+									class="hobi-input"
+									placeholder="Jelaskan riwayat penyakit anda" />
+							</div>
+							<div class="cirikhas">
+								<p>Apakah anda memiliki ciri khas?</p>
+								<div class="wrapperpilihanpenyakit">
+									<div class="pilihanriwayatpenyakit">
+										<input type="radio" name="riwayatpenyakit" value="Ya">
+										<label for="html">Ya, saya memiliki ciri khas</label> <br>
+									</div>
+									<div class="pilihanriwayatpenyakit">
+										<input type="radio" id="css" name="riwayatpenyakit" value="Tidak">
+										<label for="Tidak">Tidak, saya tidak memiliki ciri khas</label>
+									</div>
+								</div>
+							</div>
+							<div class="hobi">
+								<p>Jelaskan ciri khas anda (jika ada)</p>
+								<input
+									type="username"
+									class="hobi-input"
+									placeholder="Jelaskan ciri khas anda"/>
+							</div>
+							<div class="riwayatpenyakit">
+								<p>Apakah anda memiliki cacat fisik?</p>
+								<div class="wrapperpilihanpenyakit">
+									<div class="pilihanriwayatpenyakit">
+										<input type="radio" name="riwayatpenyakit" value="Ya">
+										<label for="html">Ya, saya memiliki cacat fisik</label> <br>
+									</div>
+									<div class="pilihanriwayatpenyakit">
+										<input type="radio" id="css" name="riwayatpenyakit" value="Tidak">
+										<label for="Tidak">Tidak, saya tidak memiliki cacat fisik</label>
+									</div>
+								</div>
+							</div>
+							<div class="hobi">
+								<p>Jelaskan cacat fisik anda (jika ada)</p>
+								<input
+									type="username"
+									class="hobi-input"
+									placeholder="Jelaskan cacat fisik anda" />
 							</div>
 						<button class="simpan-btn">Simpan</button>
 					</div>
@@ -194,7 +234,7 @@
 				}
 
 				// Show the selected form
-				document.getElementById(formId + '-form').style.display = 'block';
+				document.getElementById(formId + '-form').style.display = 'flex';
 			}
 		</script>
 	</body>
