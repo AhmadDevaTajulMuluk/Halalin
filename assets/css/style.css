@@ -1935,10 +1935,16 @@ input[type="text"] {
   align-items: center;
   justify-content: flex-end;
 }
-.header-right svg {
-  width: 8%;
-  fill: #979797;
-}
+
+.icon-notif {
+	display: flex;
+	justify-content: flex-end;
+  }
+  .header-right svg {
+	width: 8%;
+	fill: #979797;
+	cursor: pointer;
+  }
 .roomchat {
   display: flex;
   height: 70vh;
@@ -2036,6 +2042,43 @@ input[type="text"] {
   margin: -1px;
   border-radius: 10px;
 }
+
+.notify-box {
+	width: 300px;
+	background-color: white;
+	padding: 20px;
+	top: 20%;
+	border-radius: 10px;
+	position: absolute;
+  }
+  .bg-notif {
+	display: flex;
+	flex-direction: column;
+	h2 {
+	  margin: 0;
+	  font-size: 18px;
+	  padding-bottom: 10px;
+	  color: #4b5c98;
+	}
+	h4 {
+	  margin: 0;
+	  font-size: 15px;
+	  color: rgb(56, 56, 56);
+	}
+	p {
+	  margin: 0;
+	  font-size: 14px;
+	  color: #272727;
+	}
+  }
+  .notify-item {
+	display: flex;
+	flex-direction: column;
+	border-top: 3px solid #e6e6e6;
+	cursor: pointer;
+	padding-block: 10px;
+	/* background-color: #14f000; */
+  }
 
 /* Pelatihan */
 body#pelatihan {
