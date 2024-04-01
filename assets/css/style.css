@@ -1567,7 +1567,7 @@ button:hover {
 	justify-content: center;
 	position: relative;
 	height: 5rem;
-	width: 150px; /* Set width to auto to prevent overlapping */
+	width: 150px;
 	margin: 1rem;
 }
 
@@ -1742,7 +1742,7 @@ button:hover {
 		transition: 1s;
 	}
 	.side-bio {
-		/* height: fit-content; */
+		
 		width: fit-content;
 		height: fit-content;
 		position: fixed;
@@ -1751,7 +1751,7 @@ button:hover {
 		display: flex;
 		position: absolute;
 		right: -35px;
-		/* margin-left: 225px; */
+		
 	}
 }
 
