@@ -69,7 +69,7 @@
             <div class="choice-container">
               <div class="choice">
                 <p class="answer-prefix" onclick="selectChoice(this)">A</p>
-                <p class="answer-text" onclick="selectChoice(this)">
+                <p class="answer-text" onclick="selectChoice(this)" data-number="1">
                   Pilihan A
                 </p>
               </div>
@@ -81,24 +81,25 @@
                 >
                   B
                 </p>
-                <p class="answer-text" onclick="selectChoice(this)">
+                <p class="answer-text" onclick="selectChoice(this)" data-number="2">
                   Pilihan B
                 </p>
               </div>
               <div class="choice">
                 <p class="answer-prefix" onclick="selectChoice(this)">C</p>
-                <p class="answer-text" onclick="selectChoice(this)">
+                <p class="answer-text" onclick="selectChoice(this)" data-number="3">
                   Pilihan C
                 </p>
               </div>
               <div class="choice">
                 <p class="answer-prefix" onclick="selectChoice(this)">D</p>
-                <p class="answer-text" onclick="selectanswer(this)">
+                <p class="answer-text" onclick="selectanswer(this)" data-number="4">
                   Pilihan D
                 </p>
               </div>
             </div>
           </div>
+
           <div class="soal" id="soal">
             <div id="soal-container">
               <div class="salah">
@@ -110,14 +111,62 @@
 
               <h1 id="judul-soal">Soal 2</h1>
               <p id="isi-soal" style="font-size: 18px">
-                Lorem ipsum dolor sit amet,
+                Apa hikmah dan manfaat dari menjalani proses taaruf yang baik dan benar?
               </p>
             </div>
             <div class="choice-container">
               <div class="choice">
                 <p class="answer-prefix" onclick="selectChoice(this)">A</p>
-                <p class="answer-text" onclick="selectChoice(this)">
-                  Pilihan A
+                <p class="jawab-text" onclick="selectChoice(this)">
+                  Mendapatkan jodoh sesuai dengan syariat islam
+                </p>
+              </div>
+              <div class="choice">
+                <p
+                  class="answer-prefix"
+                  onclick="selectChoice(this)"
+                >
+                  B
+                </p>
+                <p class="jawab-text" onclick="selectChoice(this)">
+                  Punya istri 2
+                </p>
+              </div>
+              <div class="choice">
+                <p class="answer-prefix" onclick="selectChoice(this)">C</p>
+                <p class="jawab-text" onclick="selectChoice(this)">
+                  Kenalan sama orang baru
+                </p>
+              </div>
+              <div class="choice">
+                <p class="answer-prefix" onclick="selectChoice(this)"
+                style="background-color: #4b5c98; color: #fff">D</p>
+                <p class="jawab-text" onclick="selectanswer(this)">
+                  Tidak ada
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="soal" id="soal">
+            <div id="soal-container">
+              <div class="benar">
+                <h1>
+                  <i class="fa-solid fa-check"></i>
+                  Benar
+                </h1>
+              </div>
+
+              <h1 id="judul-soal">Soal 3</h1>
+              <p id="isi-soal" style="font-size: 18px">
+                Mengapa ta'aruf dianggap penting dalam Islam?
+              </p>
+            </div>
+            <div class="choice-container">
+              <div class="choice">
+                <p class="answer-prefix" onclick="selectChoice(this)">A</p>
+                <p class="jawab-text" onclick="selectChoice(this)">
+                  Karena termasuk rukun iman
                 </p>
               </div>
               <div class="choice">
@@ -128,24 +177,25 @@
                 >
                   B
                 </p>
-                <p class="answer-text" onclick="selectChoice(this)">
-                  Pilihan B
+                <p class="jawab-text" onclick="selectChoice(this)">
+                  Karena dapat mendapat jodoh dengan cara sesuai syariat
                 </p>
               </div>
               <div class="choice">
                 <p class="answer-prefix" onclick="selectChoice(this)">C</p>
-                <p class="answer-text" onclick="selectChoice(this)">
-                  Pilihan C
+                <p class="jawab-text" onclick="selectChoice(this)">
+                  Tidak tahu
                 </p>
               </div>
               <div class="choice">
                 <p class="answer-prefix" onclick="selectChoice(this)">D</p>
-                <p class="answer-text" onclick="selectanswer(this)">
-                  Pilihan D
+                <p class="jawab-text" onclick="selectanswer(this)">
+                  Karena termasuk rukun islam
                 </p>
               </div>
             </div>
           </div>
+          
         </div>
       </div>
     </main>

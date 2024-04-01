@@ -214,28 +214,42 @@ function selectChoice(element) {
 	}
 }
 
-var soal = [
+const choices = Array.from(document.getElementsByClassName("choice-text"));
+
+let soal = [
 	{
 		judul: "Soal 1",
 		isi: "Apa saja syarat ta'aruf",
-		jawaban: ["Pilihan A", "Pilihan B", "Pilihan C", "Pilihan D"],
+		choice1: "Niat yang buruk",
+    choice2: "Dapat Izin dari wali",
+    choice3: "Tidak direstui",
+    choice4: "Sembunyi sembunyi",
+    answer: 1
 	},
 	{
 		judul: "Soal 2",
 		isi: "Apa hikmah dan manfaat dari menjalani proses taaruf yang baik dan benar?",
-		jawaban: ["Pilihan A", "Pilihan B", "Pilihan C", "Pilihan D"],
+		choice1: "Mendapatkan jodoh sesuai dengan syariat islam",
+    choice2: "Punya istri 2",
+    choice3: "Kenalan sama orang baru",
+    choice4: "Tidak ada",
+    answer: 1
 	},
 	{
 		judul: "Soal 3",
 		isi: "Mengapa taaruf dianggap penting dalam Islam?",
-		jawaban: ["Pilihan A", "Pilihan B", "Pilihan C", "Pilihan D"],
+		choice1: "Karena termasuk rukun iman",
+    choice2: "Karena termasuk rukun islam",
+    choice3: "Karena dapat mendapat jodoh dengan cara sesuai syariat",
+    choice4: "Tidak tahu",
+    answer: 2
 	},
 ];
 
 function tampilkanSoal(index) {
 	var judulSoalElement = document.getElementById("judul-soal");
 	var isiSoalElement = document.getElementById("isi-soal");
-	var jawabanElement = document.querySelector("#jawaban");
+	var jawabanElement = document.querySelectorAll(".choice-text, .answer-text");
 	var clickedElements = document.querySelectorAll(".choice-prefix.clicked, .choice-text.clicked");
 	clickedElements.forEach(function (element) {
 		element.classList.remove("clicked");
@@ -244,22 +258,10 @@ function tampilkanSoal(index) {
 	judulSoalElement.innerHTML = soal[index].judul;
 	isiSoalElement.innerHTML = soal[index].isi;
 
-	jawabanElement.innerHTML = "";
-
-	for (var i = 0; i < soal[index].jawaban.length; i++) {
-		var choiceElement = document.createElement("div");
-		choiceElement.classList.add("choice");
-		var choicePrefix = document.createElement("p");
-		choicePrefix.classList.add("choice-prefix");
-		choicePrefix.onclick = selectChoice;
-		var choiceText = document.createElement("p");
-		choiceText.classList.add("choice-text");
-		choiceText.textContent = soal[index].jawaban[i];
-		choiceText.onclick = selectChoice;
-		choiceElement.appendChild(choicePrefix);
-		choiceElement.appendChild(choiceText);
-		jawabanElement.appendChild(choiceElement);
-	}
+	jawabanElement.forEach(function(element, i) {
+    element.textContent = soal[index]["choice" + (i+1)];
+    element.setAttribute("data-number", i+1); 
+});
 }
 
 document.addEventListener("DOMContentLoaded", function () {

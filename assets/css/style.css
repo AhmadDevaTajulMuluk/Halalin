@@ -1068,7 +1068,8 @@ button:hover {
 	box-shadow: 5px 5px 10px rgba(107, 107, 107, 0.274);
 }
 
-.answer-text {
+.answer-text,
+.jawab-text {
 	display: flex;
 	align-items: center;
 	padding-left: 20px;
