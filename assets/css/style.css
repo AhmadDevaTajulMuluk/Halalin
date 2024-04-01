@@ -501,7 +501,7 @@ button:hover {
   padding: 20px;
   align-items: center;
   justify-content: center;
-  margin: 0 auto;
+  margin: 0;
   border-radius: 15px;
   background-color: white;
   box-shadow: 13px 13px 20px #cbced1, -5px 1px 20px #cbced1;
@@ -510,16 +510,23 @@ button:hover {
   text-align: center;
   gap: 15px;
 }
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#page-register {
+  background-color: #fff4f6;
+}
 #register {
   display: flex;
   align-items: center;
   justify-content: center;
   width: 100%;
-  background-color: #fff4f6;
 }
 .wrapper-register h1 {
   color: #272727;
-  font-size: 28px;
+  font-size: 25px;
 }
 
 .field-register {
@@ -528,7 +535,7 @@ button:hover {
   align-items: center;
   flex-direction: column;
   width: 100%;
-  margin: auto;
+  margin: 0;
   gap: 10px;
 }
 
@@ -580,7 +587,7 @@ button:hover {
   outline: none;
   border: none;
   cursor: pointer;
-  width: fit-content;
+  width: 100px;
   height: auto;
   border-radius: 30px;
   font-size: 20px;
