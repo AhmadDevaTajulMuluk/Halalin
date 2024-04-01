@@ -1804,8 +1804,9 @@ input[type="text"] {
 .card-header {
   padding: 10px;
   text-align: center;
-  background-color: #cecece;
+  background-color: #f5eeee;
   border-radius: 10px 10px 0 0;
+  border-bottom: 1px solid #ccc;
 }
 
 .card-header h2 {
