@@ -501,7 +501,7 @@ button:hover {
   padding: 20px;
   align-items: center;
   justify-content: center;
-  margin: 0;
+  margin: 5rem;
   border-radius: 15px;
   background-color: white;
   box-shadow: 13px 13px 20px #cbced1, -5px 1px 20px #cbced1;
