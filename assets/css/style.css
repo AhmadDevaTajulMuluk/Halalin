@@ -1084,6 +1084,24 @@ button:hover {
   font-size: 1.2rem;
 }
 
+.keterangan button {
+  background-color: #4b5c98;
+  padding: 10px 20px;
+  gap: 2px;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: transform 0.3s;
+}
+
+.keterangan button:hover{
+  background-color: #001b3f;
+  color: #fff;
+  transform: scale(1.05);
+}
+
 #side-soal-container {
   display: flex;
   flex: 0 0 260px;

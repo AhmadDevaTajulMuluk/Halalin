@@ -338,6 +338,10 @@ function selesai() {
 	}, 500);
 }
 
+function kePelatihan(){
+  window.location.href = "../pages/pelatihan.html"
+}
+
 function roomChat() {
 	window.location.href = "../pages/chat-sedangtaaruf.html";
 }
