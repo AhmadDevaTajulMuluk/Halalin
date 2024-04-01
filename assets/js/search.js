@@ -120,12 +120,51 @@ function search() {
   }
 }
 
-
 document.addEventListener("DOMContentLoaded", function () {
-  let searchType = document.getElementById("searchType");
-  searchType.value = "physical"; // Set default searchType to 'physical'
-  searchType.dispatchEvent(new Event("change")); // Trigger change event to update UI
-});
+  // Mendapatkan parameter dari URL
+  const queryString = window.location.search;
+  const urlParams = new URLSearchParams(queryString);
+
+  // Mengambil data dari parameter
+  const name = urlParams.get('name');
+  const age = urlParams.get('age');
+  const quran = urlParams.get('quran');
+  const education = urlParams.get('education');
+  const location = urlParams.get('location');
+  const occupation = urlParams.get('occupation');
+  const maritalStatus = urlParams.get('maritalStatus');
+  const personality = urlParams.get('personality');
+  const ethnicity = urlParams.get('ethnicity');
+  const bodyType = urlParams.get('bodyType');
+  const skinColor = urlParams.get('skinColor');
+  const hairColor = urlParams.get('hairColor');
+  const weight = urlParams.get('weight');
+  const height = urlParams.get('height');
+
+  // Menampilkan data CV ke dalam elemen dengan id "cv"
+  const cvElement = document.getElementById('preview-cv');
+  cvElement.innerHTML = `
+    <p><strong>Nama:</strong> ${decodeURIComponent(name)}</p>
+    <p><strong>Umur:</strong> ${age}</p>
+    <p><strong>Hafalan Al-Quran:</strong> ${decodeURIComponent(quran)}</p>
+    <p><strong>Pendidikan:</strong> ${decodeURIComponent(education)}</p>
+    <p><strong>Domisili:</strong> ${decodeURIComponent(location)}</p>
+    <p><strong>Pekerjaan:</strong> ${decodeURIComponent(occupation)}</p>
+    <p><strong>Status Pernikahan:</strong> ${decodeURIComponent(maritalStatus)}</p>
+    <p><strong>Sifat:</strong> ${decodeURIComponent(personality)}</p>
+    <p><strong>Suku Bangsa:</strong> ${decodeURIComponent(ethnicity)}</p>
+    <p><strong>Bentuk Fisik:</strong> ${decodeURIComponent(bodyType)}</p>
+    <p><strong>Warna Kulit:</strong> ${decodeURIComponent(skinColor)}</p>
+    <p><strong>Warna Rambut:</strong> ${decodeURIComponent(hairColor)}</p>
+    <p><strong>Berat Badan:</strong> ${weight}</p>
+    <p><strong>Tinggi Badan:</strong> ${height}</p>`;
+  });
+
+// document.addEventListener("DOMContentLoaded", function () {
+//   let searchType = document.getElementById("searchType");
+//   searchType.value = "physical"; // Set default searchType to 'physical'
+//   searchType.dispatchEvent(new Event("change")); // Trigger change event to update UI
+// });
 
 document.getElementById("searchType").addEventListener("change", function () {
   let searchType = this.value;
@@ -238,9 +277,7 @@ function displayPopup(person) {
     <button id="closePopup">Close</button>
     <a href="#" class="cv-button" id="cv-button">Lihat CV</a>
   </div>
-  
   `;
-  
 
   popupBackdrop.innerHTML = popupContent;
 
@@ -249,8 +286,18 @@ function displayPopup(person) {
   closePopupButton.addEventListener("click", function () {
     popupBackdrop.style.display = "none";
   });
+
+  // Add event listener for "Lihat CV" button
+  let cvButton = document.getElementById("cv-button");
+  cvButton.addEventListener("click", function () {
+    navigateToCV(person); // Menavigasi ke halaman cv.html dengan membawa data orang yang dipilih
+  });
 }
 
-document.getElementById("cv-button").addEventListener("click", function() {
-  window.location.href = "#"; 
-});
+function navigateToCV(person) {
+  // Membuat URL dengan parameter data orang yang dipilih
+  let url = `/views/pages/preview-cv.html?name=${encodeURIComponent(person.name)}&age=${person.age}&quran=${encodeURIComponent(person.quran)}&education=${encodeURIComponent(person.education)}&location=${encodeURIComponent(person.location)}&occupation=${encodeURIComponent(person.occupation)}&maritalStatus=${encodeURIComponent(person.maritalStatus)}&personality=${encodeURIComponent(person.personality)}&ethnicity=${encodeURIComponent(person.ethnicity)}&bodyType=${encodeURIComponent(person.bodyType)}&skinColor=${encodeURIComponent(person.skinColor)}&hairColor=${encodeURIComponent(person.hairColor)}&weight=${person.weight}&height=${person.height}`;
+
+  // Mengarahkan ke halaman cv.html dengan URL yang sudah dibuat
+  window.location.href = url;
+}
