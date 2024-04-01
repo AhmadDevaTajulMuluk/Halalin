@@ -535,7 +535,7 @@ button:hover {
   align-items: center;
   flex-direction: column;
   width: 100%;
-  margin: 0;
+  margin: auto;
   gap: 10px;
 }
 
@@ -1782,6 +1782,11 @@ input[type="text"] {
   background-color: #f9f9f9;
   border-radius: 20px;
   box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+.card:hover {
+  transform: scale(1.05);
 }
 
 @media (max-width: 600px) {
@@ -1799,8 +1804,8 @@ input[type="text"] {
 .card-header {
   padding: 10px;
   text-align: center;
-  background-color: #dcd6d7;
-  border-radius: 5px 5px 0 0;
+  background-color: #cecece;
+  border-radius: 10px 10px 0 0;
 }
 
 .card-header h2 {
@@ -1863,7 +1868,7 @@ input[type="text"] {
   padding: 8px 15px;
   background-color: #ff5142;
   border: none;
-  border-radius: 5px;
+  border-radius: 50px;
   color: #fff;
   font-size: 16px;
   cursor: pointer;
@@ -1878,10 +1883,10 @@ input[type="text"] {
   bottom: 20px;
   padding: 8px 15px;
   right: calc(10px + 10px); /* Sesuaikan dengan jarak dari bagian kanan popup */
-  padding: 8px 15px;
+  padding: 13px 16px;
   background-color: #4b5c98; /* Warna biru yang konsisten dengan gaya tombol */
   border: none;
-  border-radius: 5px;
+  border-radius: 50px;
   color: #fff;
   font-size: 16px;
   text-decoration: none;
