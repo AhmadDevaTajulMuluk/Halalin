@@ -1751,7 +1751,6 @@ button:hover {
 		transition: 1s;
 	}
 	.side-bio {
-		
 		width: fit-content;
 		height: fit-content;
 		position: fixed;
@@ -1760,7 +1759,6 @@ button:hover {
 		display: flex;
 		position: absolute;
 		right: -35px;
-		
 	}
 }
 
