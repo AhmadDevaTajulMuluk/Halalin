@@ -428,21 +428,17 @@
 			}
 
 			function showForm(formId) {
-				// Hide all forms first
 				let forms = document.getElementsByClassName('form-bio');
 				let sidebarChoice = document.getElementById(formId);
 				let sidebars = document.getElementsByClassName('sidebar-items');
-				for (var i = 0; i < sidebars.length; i++) {
+				for (let i = 0; i < sidebars.length; i++) {
 					sidebars[i].classList.remove('selected');
-					console.log('siu')
 				}
-				console.log('siu')
 				sidebarChoice.classList.add('selected');
-				for (var i = 0; i < forms.length; i++) {
+				for (let i = 0; i < forms.length; i++) {
 					forms[i].style.display = 'none';
 				}
 				
-				// Show the selected form
 				document.getElementById(formId + '-form').style.display = 'block';
 			}
 		</script>

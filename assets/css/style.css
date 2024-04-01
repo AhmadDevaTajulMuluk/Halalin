@@ -1567,7 +1567,7 @@ button:hover {
 	justify-content: center;
 	position: relative;
 	height: 5rem;
-	width: 150px; /* Set width to auto to prevent overlapping */
+	width: 150px;
 	margin: 1rem;
 }
 
@@ -1677,7 +1677,7 @@ button:hover {
 	width: 100%;
 	padding: 10px 20px 5px 15px;
 	margin-right: 20px;
-	border: 1px solid #969696;
+	border: none;
 	border-radius: 5px;
 	border-bottom: 0.5px solid rgb(156, 156, 156);
 	background-color: white;
@@ -1751,7 +1751,7 @@ button:hover {
 		transition: 1s;
 	}
 	.side-bio {
-		/* height: fit-content; */
+		
 		width: fit-content;
 		height: fit-content;
 		position: fixed;
@@ -1760,7 +1760,7 @@ button:hover {
 		display: flex;
 		position: absolute;
 		right: -35px;
-		/* margin-left: 225px; */
+		
 	}
 }
 
