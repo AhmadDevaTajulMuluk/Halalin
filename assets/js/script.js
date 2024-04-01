@@ -219,17 +219,17 @@ function selectChoice(element) {
 var soal = [
   {
     judul: "Soal 1",
-    isi: "Apa yang dimaksud dengan",
+    isi: "Apa saja syarat ta'aruf",
     jawaban: ["Pilihan A", "Pilihan B", "Pilihan C", "Pilihan D"],
   },
   {
     judul: "Soal 2",
-    isi: "Sebutkan bla",
+    isi: "Apa hikmah dan manfaat dari menjalani proses taaruf yang baik dan benar?",
     jawaban: ["Pilihan A", "Pilihan B", "Pilihan C", "Pilihan D"],
   },
   {
     judul: "Soal 3",
-    isi: "Pertanyaan tentang ...",
+    isi: "Mengapa taaruf dianggap penting dalam Islam?",
     jawaban: ["Pilihan A", "Pilihan B", "Pilihan C", "Pilihan D"],
   },
 ];
