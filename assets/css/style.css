@@ -2116,14 +2116,13 @@ input[type="text"] {
 	align-items: flex-start;
 	gap: 10px;
 }
-#user {
+.user {
 	display: flex;
 	flex-direction: row-reverse;
-
-	.text p {
-		background-color: #4b5c98;
-		color: white;
-	}
+}
+.user .text p {
+	background-color: #4b5c98;
+	color: white;
 }
 .foto img {
 	width: 6vh;

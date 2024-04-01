@@ -435,12 +435,26 @@
 					sidebars[i].classList.remove('selected');
 				}
 				sidebarChoice.classList.add('selected');
+
 				for (let i = 0; i < forms.length; i++) {
 					forms[i].style.display = 'none';
 				}
 				
 				document.getElementById(formId + '-form').style.display = 'block';
 			}
+
+			let simpanButton = document.querySelectorAll('.simpan-btn');
+			simpanButton.forEach(function(btn) {
+				btn.addEventListener("click", function() {
+					let konfirmasi = confirm("Apakah yakin semua sudah benar dan ingin disimpan?");
+					if (konfirmasi) {
+						alert("Data telah disimpan.");
+					} else {
+						alert("Data batal disimpan");
+					}
+				});
+
+			});
 		</script>
 	</body>
 </html>

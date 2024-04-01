@@ -340,8 +340,8 @@ function selesai() {
 	}, 500);
 }
 
-function kePelatihan(){
-  window.location.href = "../pages/pelatihan.html"
+function kePelatihan() {
+	window.location.href = "../pages/pelatihan.html";
 }
 
 function roomChat() {
@@ -364,4 +364,55 @@ function showNotif(id) {
 		boxNotif.style.opacity = 0;
 		down = false;
 	}
+}
+
+//masih salah ges harusnya di kanan
+document.addEventListener("DOMContentLoaded", function () {
+	var sendButton = document.querySelector(".footer-chat svg");
+	sendButton.addEventListener("click", sendMessage);
+
+	var messageInput = document.querySelector(".inputbox input");
+	messageInput.addEventListener("keypress", function (e) {
+		if (e.key === "Enter") {
+			sendMessage();
+		}
+	});
+});
+
+function sendMessage() {
+	var messageInput = document.querySelector(".inputbox input");
+	var messageText = messageInput.value;
+
+	if (messageText.trim() === "") {
+		return;
+	}
+
+	addMessageToChat("user", messageText);
+
+	messageInput.value = "";
+}
+
+function addMessageToChat(sender, message) {
+	var messageContainer = document.createElement("div");
+	messageContainer.classList.add("bubble-chat");
+	if (sender === "user") {
+		messageContainer.classList.add("user");
+		messageContainer.style;
+	}
+
+	messageContainer.innerHTML = `
+    <div class="bubble-chat user">
+      <div class="foto">
+        <img src="../../assets/images/user.png" alt="pp-user" />
+      </div>
+      <div class="text">
+        <p>${message}</p>
+      </div>
+    </div>
+	`;
+
+	var chatContainer = document.querySelector(".bubblechat-container");
+	chatContainer.appendChild(messageContainer);
+
+	chatContainer.scrollTop = chatContainer.scrollHeight;
 }

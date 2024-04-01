@@ -1,18 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Preview CV</title>
-    <link rel="stylesheet" href="../../assets/css/style.css">
-</head>
-<body>
-    <header id="navbar" class="header-effect"></header>
-    <div id="preview-cv">
+    <link rel="stylesheet" href="../../assets/css/style.css" />
+  </head>
 
-    </div>
+  <style>
+    .container-preview {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    margin: 0 auto;
+    }
+
+    .card-cv {
+    position: relative; /* Tambahkan agar posisi absolut pada tombol bekerja dengan benar */
+    border: 1px solid #ccc;
+    width: 50%;
+    border-radius: 8px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    position: relative; /* Tambahkan agar posisi absolut pada tombol bekerja dengan benar */
+    }
+
+    .card-cv p {
+    margin: 5px 0;
+    }
+
+    .card-cv strong {
+    font-weight: bold;
+    }
+
+    .button-preview {
+    position: absolute;
+    bottom: 10px; /* Jarak dari bawah */
+    right: 10px; /* Jarak dari kanan */
+    padding: 10px 20px;
+    background-color: #4b5c98; /* Warna biru yang konsisten dengan gaya tombol */
+    color: #fff;
+    text-decoration: none;
+    border-radius: 20px;
+    }
+
+    .button-preview:hover {
+	background-color: #252e50;
+    }
+
+  </style>
+
+  <body>
+    <header id="navbar" class="header-effect"></header>
+    <button onclick="window.history.back()" class="back-button">
+      <i class="fa fa-chevron-left" aria-hidden="true"></i> Kembali
+    </button>
+    <div id="preview-cv"></div>
     <section id="footer"></section>
     <script type="text/javascript" src="../../assets/js/script.js"></script>
     <script type="text/javascript" src="../../assets/js/search.js"></script>
-</body>
+  </body>
 </html>
