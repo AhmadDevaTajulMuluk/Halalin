@@ -1,59 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="../../assets/css/style.css" />
-		<link
-			rel="stylesheet"
-			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
-		<link
-			rel="stylesheet"
-			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-		<title>Chat</title>
-	</head>
-	<body id="page-chat">
-		<header id="navbar"></header>
-		<main id="page-konsultasi">
-			<div id="popup-overlay" class="popup-overlay"></div>
-			<div id="konfirmasi-popup" class="popup">
-				<div class="popup-content">
-					<p>Anda ingin menerima taaruf ini?</p>
-					<p
-						onclick="displayProfile()"
-						style="font-size: 12px !important; cursor: pointer; color: #554a92">
-						lihat profil
-					</p>
-					<button id="yes-btn" onclick="roomChat()">Ya</button>
-					<button onclick="closePopup()" style="background-color: #a0a0a0">Tidak</button>
-				</div>
-			</div>
-			<div class="header-chat">
-				<div class="headerchat-container">
-					<div class="header-left">
-						<img src="../../assets/images/user.png" alt="group" />
-						<h3 class="roomchat-name">Grup Taaruf</h3>
-					</div>
-					<div class="header-right" id="notification">
-						<div class="notify-box" id="boxnotif" style="opacity: 0">
-							<div class="bg-notif">
-								<h2>Pemberitahuan</h2>
-								<div class="notify-item" onclick="lihatnotif()">
-									<h4>Undangan Taaruf</h4>
-									<p>Anda mendapatkan undangan taaruf dari (nama)</p>
-								</div>
-								<div class="notify-item" onclick="roomChat()">
-									<h4>Taaruf diterima</h4>
-									<p>(nama) menerima ajakan taaruf dari anda</p>
-								</div>
-								<div class="notify-item">
-									<h4>Undangan Taaruf</h4>
-									<p>Anda mendapatkan undangan taaruf dari (nama)</p>
-								</div>
-							</div>
-						</div>
-						<div class="icon-notif">
-							<!-- <svg
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../assets/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <title>Chat</title>
+  </head>
+  <body id="page-chat">
+    <header id="navbar"></header>
+    <main id="page-konsultasi">
+      <div class="konsultasi-chat">
+        <div class="container-groupchatname">
+		  <h3 class="groupchat-name">Grup Taaruf</h3>
+		</div>
+        <div class="container-roomchat">
+          <div id="popup-overlay" class="popup-overlay"></div>
+          <div id="konfirmasi-popup" class="popup">
+            <div class="popup-content">
+              <p>Anda ingin menerima taaruf ini?</p>
+              <p
+                onclick="displayProfile()"
+                style="
+                  font-size: 12px !important;
+                  cursor: pointer;
+                  color: #554a92;
+                "
+              >
+                lihat profil
+              </p>
+              <button id="yes-btn" onclick="roomChat()">Ya</button>
+              <button onclick="closePopup()" style="background-color: #a0a0a0">
+                Tidak
+              </button>
+            </div>
+          </div>
+          <div class="header-chat">
+            <div class="headerchat-container">
+              <div class="header-left">
+                <img src="../../assets/images/user.png" alt="group" />
+                <h3 class="roomchat-name">Grup Taaruf</h3>
+              </div>
+              <div class="header-right" id="notification">
+                <div class="notify-box" id="boxnotif" style="opacity: 0">
+                  <div class="bg-notif">
+                    <h2>Pemberitahuan</h2>
+                    <div class="notify-item" onclick="lihatnotif()">
+                      <h4>Undangan Taaruf</h4>
+                      <p>Anda mendapatkan undangan taaruf dari (nama)</p>
+                    </div>
+                    <div class="notify-item" onclick="roomChat()">
+                      <h4>Taaruf diterima</h4>
+                      <p>(nama) menerima ajakan taaruf dari anda</p>
+                    </div>
+                    <div class="notify-item">
+                      <h4>Undangan Taaruf</h4>
+                      <p>Anda mendapatkan undangan taaruf dari (nama)</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="icon-notif">
+                  <!-- <svg
 								onclick="showNotif('boxnotif')"
 								xmlns="http://www.w3.org/2000/svg"
 								viewBox="0 0 36 40">
@@ -61,35 +75,42 @@
 									d="M17.8261 0C16.6441 0 15.5106 0.468252 14.6749 1.30175C13.8391 2.13524 13.3696 3.2657 13.3696 4.44444V5.20222C8.17772 7.03333 4.45652 11.9733 4.45652 17.7778V28.8889H2.22826C1.63729 28.8889 1.07052 29.123 0.652643 29.5398C0.234763 29.9565 0 30.5217 0 31.1111C0 31.7005 0.234763 32.2657 0.652643 32.6825C1.07052 33.0992 1.63729 33.3333 2.22826 33.3333H33.4239C34.0149 33.3333 34.5817 33.0992 34.9995 32.6825C35.4174 32.2657 35.6522 31.7005 35.6522 31.1111C35.6522 30.5217 35.4174 29.9565 34.9995 29.5398C34.5817 29.123 34.0149 28.8889 33.4239 28.8889H31.1957V17.7778C31.196 15.0199 30.3391 12.3296 28.7429 10.0775C27.1466 7.82541 24.8896 6.12214 22.2826 5.20222V4.44444C22.2826 3.2657 21.8131 2.13524 20.9773 1.30175C20.1416 0.468252 19.008 0 17.8261 0ZM17.8261 40C16.6441 40 15.5106 39.5317 14.6749 38.6983C13.8391 37.8648 13.3696 36.7343 13.3696 35.5556H22.2826C22.2826 36.7343 21.8131 37.8648 20.9773 38.6983C20.1416 39.5317 19.008 40 17.8261 40Z"
 									fill="#4B5C98" />
 							</svg> -->
-							<div
-								class="fa fa-bell"
-								style="color: #4b5c98; cursor: pointer"
-								onclick="showNotif('boxnotif')"></div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="roomchat">
-				<div class="roomchat-container">
-					<div class="isi">
-						<h3>Anda sedang tidak menjalani proses ta’aruf</h3>
-						<p>Mulai cari pasangan dan mulai percakapan untuk mengenal calon pasangan lebih jauh</p>
-						<p>(Percakapan ini akan didampingi oleh ustadz)</p>
-					</div>
-				</div>
-			</div>
-			<div class="footer-chat">
-				<div class="inputbox">
-					<input type="text" placeholder="Ketik pesan ..." />
-					<svg viewBox="0 0 32 32">
-						<path
-							d="M4.53366 27.2001L27.8003 17.2268C28.0408 17.1243 28.2459 16.9534 28.3901 16.7353C28.5342 16.5172 28.6111 16.2615 28.6111 16.0001C28.6111 15.7387 28.5342 15.483 28.3901 15.2649C28.2459 15.0468 28.0408 14.8759 27.8003 14.7734L4.53366 4.80011C4.33219 4.71224 4.11202 4.67591 3.893 4.69439C3.67399 4.71287 3.46302 4.78558 3.27912 4.90597C3.09523 5.02636 2.9442 5.19064 2.83967 5.38398C2.73513 5.57733 2.68037 5.79365 2.68033 6.01345L2.66699 12.1601C2.66699 12.8268 3.16033 13.4001 3.82699 13.4801L22.667 16.0001L3.82699 18.5068C3.16033 18.6001 2.66699 19.1734 2.66699 19.8401L2.68033 25.9868C2.68033 26.9334 3.65366 27.5868 4.53366 27.2001Z"
-							fill="#4B5C98" />
-					</svg>
-				</div>
-			</div>
-		</main>
-		<script type="text/javascript" src="../../assets/js/script.js"></script>
-		<script type="text/javascript" src="../../assets/js/search.js"></script>
-	</body>
+                  <div
+                    class="fa fa-bell"
+                    style="color: #4b5c98; cursor: pointer"
+                    onclick="showNotif('boxnotif')"
+                  ></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="roomchat">
+            <div class="roomchat-container">
+              <div class="isi">
+                <h3>Anda sedang tidak menjalani proses ta’aruf</h3>
+                <p>
+                  Mulai cari pasangan dan mulai percakapan untuk mengenal calon
+                  pasangan lebih jauh
+                </p>
+                <p>(Percakapan ini akan didampingi oleh ustadz)</p>
+              </div>
+            </div>
+          </div>
+          <div class="footer-chat">
+            <div class="inputbox">
+              <input type="text" placeholder="Ketik pesan ..." />
+              <svg viewBox="0 0 32 32">
+                <path
+                  d="M4.53366 27.2001L27.8003 17.2268C28.0408 17.1243 28.2459 16.9534 28.3901 16.7353C28.5342 16.5172 28.6111 16.2615 28.6111 16.0001C28.6111 15.7387 28.5342 15.483 28.3901 15.2649C28.2459 15.0468 28.0408 14.8759 27.8003 14.7734L4.53366 4.80011C4.33219 4.71224 4.11202 4.67591 3.893 4.69439C3.67399 4.71287 3.46302 4.78558 3.27912 4.90597C3.09523 5.02636 2.9442 5.19064 2.83967 5.38398C2.73513 5.57733 2.68037 5.79365 2.68033 6.01345L2.66699 12.1601C2.66699 12.8268 3.16033 13.4001 3.82699 13.4801L22.667 16.0001L3.82699 18.5068C3.16033 18.6001 2.66699 19.1734 2.66699 19.8401L2.68033 25.9868C2.68033 26.9334 3.65366 27.5868 4.53366 27.2001Z"
+                  fill="#4B5C98"
+                />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script type="text/javascript" src="../../assets/js/script.js"></script>
+    <script type="text/javascript" src="../../assets/js/search.js"></script>
+  </body>
 </html>

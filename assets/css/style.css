@@ -434,8 +434,7 @@ article img {
 	box-shadow: inset 5px 5px 5px #cbced1, inset -5px -5px 5px #fff;
 }
 
-.field .username,
-.field .password {
+.field .boxfield{
 	position: relative;
 	display: flex;
 	align-items: center;
@@ -506,6 +505,11 @@ button:hover {
 	text-align: center;
 	gap: 15px;
 }
+.wrapper-register img{
+	width: 40%;
+	margin-right: 20px;
+	margin-top: 20px;
+}
 .container {
 	display: flex;
 	align-items: center;
@@ -522,7 +526,7 @@ button:hover {
 }
 .wrapper-register h1 {
 	color: #272727;
-	font-size: 25px;
+	font-size: 32px;
 }
 
 .field-register {
