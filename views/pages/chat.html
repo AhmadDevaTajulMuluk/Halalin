@@ -13,15 +13,37 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
     <title>Chat</title>
+  
   </head>
+
   <body id="page-chat">
     <header id="navbar"></header>
     <main id="page-konsultasi">
       <div class="konsultasi-chat">
-        <div class="container-groupchatname">
-		  <h3 class="groupchat-name">Grup Taaruf</h3>
-		</div>
-        <div class="container-roomchat">
+        <div class="container-leftchat">
+          <div class="sidebar">
+            <h2>Daftar Chat</h2>
+            <div class="chat-list">
+              <div class="chat-item">
+                <img src="../../assets/images/user1.png" alt="user1" />
+                <div class="chat-info">
+                  <h4>Grup Taaruf A</h4>
+                  <p>Pesan terakhir...</p>
+                </div>
+              </div>
+              <div class="chat-item">
+                <img src="../../assets/images/user2.png" alt="user2" />
+                <div class="chat-info">
+                  <h4>Grup Taaruf B</h4>
+                  <p>Pesan terakhir...</p>
+                </div>
+              </div>
+              <!-- Tambahkan chat-item lainnya sesuai kebutuhan -->
+            </div>
+          </div>
+        </div>
+        
+        <div class="container-rightchat">
           <div id="popup-overlay" class="popup-overlay"></div>
           <div id="konfirmasi-popup" class="popup">
             <div class="popup-content">
